@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakaria Gallouch - Product Marketing Solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #10b981;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 120px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="white" opacity="0.1"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 35px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* Section */
+        section {
+            padding: 80px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--dark);
+        }
+        
+        /* Value Prop */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .value-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .value-card ul {
+            list-style: none;
+        }
+        
+        .value-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .value-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .value-card.highlight {
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .value-card.highlight h3 {
+            color: white;
+        }
+        
+        .value-card.highlight li::before {
+            color: white;
+        }
+        
+        /* Why Section */
+        .why-box {
+            background: var(--dark);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .why-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+        }
+        
+        .why-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        /* Case Studies */
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .case-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .case-header {
+            background: var(--gradient);
+            color: white;
+            padding: 30px;
+        }
+        
+        .case-label {
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .case-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .case-body {
+            padding: 30px;
+        }
+        
+        .case-section {
+            margin-bottom: 20px;
+        }
+        
+        .case-section h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--gray);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .case-section p {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .case-metrics {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #f1f5f9;
+        }
+        
+        .metric {
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+        
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .feature-item p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Stats Dashboard */
+        .stats-dashboard {
+            background: var(--dark);
+            color: white;
+            padding: 60px;
+            border-radius: 20px;
+            margin: 40px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cert-badge {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            border: 2px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+        
+        .cert-badge:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .cert-badge strong {
+            display: block;
+            color: var(--primary);
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 20px 60px;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .why-box {
+                padding: 40px 30px;
+            }
+            
+            .stats-dashboard {
+                padding: 40px 30px;
+            }
+            
+            .stat-value {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-label">🚀 PRODUCT LAUNCH</div>
+            <h1>Your Next Product Marketing Solution for Data/AI/SaaS</h1>
+            <p class="hero-subtitle">10+ years transforming complex B2B narratives into measurable growth. Certified. Battle-tested. Ready to scale your EMEA expansion.</p>
+            <div class="cta-buttons">
+                <a href="mailto:ga.zakaria@gmail.com" class="btn btn-primary">Book a Discovery Call</a>
+                <a href="#case-studies" class="btn btn-secondary">See the Evidence</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Why This Profile Is Different</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <h3>Traditional PMM</h3>
+                    <ul>
+                        <li>Strong on GTM strategy</li>
+                        <li>Product positioning expertise</li>
+                        <li>Sales enablement tools</li>
+                        <li>⚠️ Weak on corporate storytelling</li>
+                        <li>⚠️ Limited PR/media muscle</li>
+                        <li>⚠️ Siloed execution</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card highlight">
+                    <h3>This Solution (Me)</h3>
+                    <ul>
+                        <li>Product Marketing mindset</li>
+                        <li>+ Corporate Comms DNA</li>
+                        <li>+ PR & Media Relations</li>
+                        <li>+ Crisis-ready operator</li>
+                        <li>+ AI-powered workflows</li>
+                        <li>+ International scale (EMEA/Africa)</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card">
+                    <h3>Your Results</h3>
+                    <ul>
+                        <li>Faster GTM execution</li>
+                        <li>Stronger brand narrative</li>
+                        <li>Media coverage amplification</li>
+                        <li>Crisis protection built-in</li>
+                        <li>Multi-market scalability</li>
+                        <li>Measurable pipeline impact</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Role -->
+    <section style="background: #f8fafc;">
+        <div class="container">
+            <div class="why-box">
+                <h3>Why This Role. Why Now.</h3>
+                <p>J'ai passé 3 ans à travailler avec l'écosystème UM6P sur les contenus AgriTech et l'innovation data-driven. J'ai couvert les acteurs du Private Equity, les plateformes SaaS B2B, et les solutions d'intelligence de marché pour CIO Mag. Votre positionnement sur la data intelligence pour investisseurs, analystes et décideurs légaux, c'est exactement le type de storytelling B2B complexe où j'excelle. Je comprends vos buyer personas. Je sais comment les atteindre. Et je suis prêt à accélérer votre expansion EMEA depuis votre hub de Casablanca.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section id="case-studies">
+        <div class="container">
+            <h2 class="section-title">Proven Impact Across Complex B2B Sectors</h2>
+            <div class="case-grid">
+                <!-- ABL Case -->
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-label">Aviation Finance • Botanicals • Hospitality</div>
+                        <div class="case-title">ABL Corporation</div>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-section">
+                            <h4>Challenge</h4>
+                            <p>Diversified investment group needed unified brand positioning and content strategy across 4 complex B2B verticals</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Solution</h4>
+                            <p>Built comprehensive GTM frameworks, created 30+ thought leadership articles, established editorial governance for multi-stakeholder approval</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Results</h4>
+                            <p>Strategic alignment achieved with ready-to-deploy 6-month content roadmaps, empowered internal teams with clear processes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAN4ALL Case -->
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-label">SportTech E-Commerce</div>
+                        <div class="case-title">FAN4ALL</div>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-section">
+                            <h4>Challenge</h4>
+                            <p>French sports ticketing platform needed brand positioning, PR strategy, and conversion-focused campaigns</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Solution</h4>
+                            <p>Defined positioning vs. competitors, built PR strategy with club partnerships, executed multi-channel campaigns segmented by persona</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">2.1M</div>
+                                <div class="metric-label">Cumulative Reach</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">€100K+</div>
+                                <div class="metric-label">PR Value</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">14.45%</div>
+                                <div class="metric-label">LinkedIn Engagement</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ATDA Case -->
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-label">Pan-African Tech Summit</div>
+                        <div class="case-title">ATDA 2021</div>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-section">
+                            <h4>Challenge</h4>
+                            <p>10th anniversary of Africa Digital Transformation summit needed breakthrough marketing for first-time African hosting</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Solution</h4>
+                            <p>Developed video content strategy with KOL testimonials, corporate documentary, and PR campaign leveraging Morocco's positioning</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">3M</div>
+                                <div class="metric-label">Organic Reach</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">+42%</div>
+                                <div class="metric-label">Community Growth</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glovo Case -->
+                <div class="case-card">
+                    <div class="case-header">
+                        <div class="case-label">Crisis Communications</div>
+                        <div class="case-title">Glovo Morocco</div>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-section">
+                            <h4>Challenge</h4>
+                            <p>Geopolitical tensions risked brand perception during Morocco-Spain diplomatic crisis</p>
+                        </div>
+                        <div class="case-section">
+                            <h4>Solution</h4>
+                            <p>Implemented e-reputation monitoring, developed crisis-ready comms plan, produced humanizing video series showcasing local team</p>
+                        </div>
+                        <div class="case-metrics">
+                            <div class="metric">
+                                <div class="metric-value">1.3M</div>
+                                <div class="metric-label">Video Reach</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">13.5K</div>
+                                <div class="metric-label">Engagements</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Dashboard -->
+    <section>
+        <div class="container">
+            <div class="stats-dashboard">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">10M+</div>
+                        <div class="stat-label">Organic Reach Generated</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">€100K+</div>
+                        <div class="stat-label">Earned Media Value</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">50+</div>
+                        <div class="stat-label">Brands Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3+</div>
+                        <div class="stat-label">Years Remote International</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features/Capabilities -->
+    <section style="background: #f8fafc;">
+        <div class="container">
+            <h2 class="section-title">Technical Stack & Capabilities</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Product Positioning</h4>
+                    <p>Messaging frameworks, competitive battlecards, value proposition development</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h4>GTM Strategy</h4>
+                    <p>Multi-channel campaign orchestration, launch planning, sales enablement</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <h4>Data-Driven Marketing</h4>
+                    <p>Google Analytics, SEO optimization, performance tracking, ROI analysis</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <h4>AI-Powered Workflows</h4>
+                    <p>Leveraging AI agents for content ops automation and competitive intelligence</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚨</div>
+                    <h4>Crisis Communications</h4>
+                    <p>E-reputation management, crisis-ready frameworks, real-time response</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌍</div>
+                    <h4>International Operator</h4>
+                    <p>EMEA/Africa markets, tri-lingual (FR/EN/AR), remote team coordination</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📝</div>
+                    <h4>Content Excellence</h4>
+                    <p>Thought leadership, SEO-driven writing, technical storytelling</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎬</div>
+                    <h4>Multimedia Production</h4>
+                    <p>Video strategy, editorial coordination, brand content campaigns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Certified Capabilities</h2>
+            <div class="cert-grid">
+                <div class="cert-badge">
+                    🎓
+                    <strong>HubSpot Content Marketing</strong>
+                </div>
+                <div class="cert-badge">
+                    🎓
+                    <strong>HubSpot Inbound Marketing</strong>
+                </div>
+                <div class="cert-badge">
+                    🎓
+                    <strong>SEO Strategy</strong>
+                </div>
+                <div class="cert-badge">
+                    🎓
+                    <strong>Google Analytics</strong>
+                </div>
+                <div class="cert-badge">
+                    🎓
+                    <strong>Google Ads</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Accelerate Your Data Intelligence GTM?</h2>
+            <p>Let's discuss how I can drive measurable impact for your EMEA expansion from day one.</p>
+            <div class="cta-buttons">
+                <a href="mailto:ga.zakaria@gmail.com" class="btn btn-primary">ga.zakaria@gmail.com</a>
+                <a href="tel:+212627056916" class="btn btn-secondary">+212 627 056 916</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.95rem; opacity: 0.9;">
+                📍 Based in Casablanca, Morocco<br>
+                🔗 <a href="https://www.linkedin.com/in/zakariagallouch" style="color: white; text-decoration: underline;">LinkedIn Profile</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Zakaria Gallouch. Built with purpose for your Product Marketing Manager role.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">This landing page demonstrates the product marketing thinking you're looking for.</p>
+    </footer>
+</body>
+</html>
