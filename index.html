@@ -3,372 +3,351 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zakaria Gallouch — Product Marketing Manager</title>
+  <title>Zakaria Gallouch — Ecosystem-led Product Clarity & Campaigns</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Social preview -->
-  <meta property="og:title" content="Zakaria Gallouch — Product Marketing Manager" />
-  <meta property="og:description" content="10 years turning complex B2B into clear product stories that sales can sell and users adopt. PMM + Comms edge." />
+  <meta property="og:title" content="Ecosystem-led Product Clarity — Zakaria Gallouch" />
+  <meta property="og:description" content="Strategic communications inside tech ecosystems — bridging UX insight, benchmarks and go-to-market clarity to drive adoption." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
     :root{
-      --bg:#ffffff; --ink:#0a0a0a; --muted:#545961; --line:#e7e9ee; --subtle:#fafafa;
-      --accent:#2563eb; --accent-2:#0ea5e9; --radius:14px; --radius-lg:18px;
-      --shadow:0 10px 30px rgba(16,24,40,.08); --ring:0 0 0 3px rgba(37,99,235,.25);
+      --bg:#ffffff; --ink:#0b1220; --muted:#5b6476; --line:#e6eaf1; --subtle:#f7f9fc;
+      --accent:#2563eb; --accent2:#0ea5e9; --ok:#16a34a; --warn:#f59e0b;
+      --radius:16px; --radius-lg:20px; --shadow:0 10px 28px rgba(15,30,60,.08); --ring:0 0 0 3px rgba(37,99,235,.25);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
-    img{max-width:100%;height:auto;display:block}
 
-    /* Container & layout (mobile-first) */
-    .container{max-width:1000px;margin:0 auto;padding:0 20px}
-    .section{padding:48px 20px;border-top:1px solid var(--line)}
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent);text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-radius:10px}
+    .container{max-width:1120px;margin:0 auto;padding:0 18px}
+    .section{padding:48px 18px;border-top:1px solid var(--line)}
     @media (min-width:720px){ .section{padding:72px 24px} }
 
-    /* Top nav (anchor) */
-    .topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+    /* Top bar */
+    .top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+    .top-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
     .brand{font-weight:800;letter-spacing:.2px}
     .nav{display:none;gap:14px}
-    .nav a{color:var(--ink);text-decoration:none;font-weight:600;opacity:.85}
+    .nav a{color:#111827;font-weight:600;opacity:.9}
     @media (min-width:720px){ .nav{display:flex} }
 
-    /* Header / Hero */
-    header{min-height:68vh;display:grid;place-items:center;position:relative;overflow:hidden}
-    .header-bg{position:absolute;inset:0;background:
-      radial-gradient(900px 420px at 50% -10%, rgba(37,99,235,.09) 0%, transparent 60%),
-      radial-gradient(700px 380px at 90% 90%, rgba(14,165,233,.08) 0%, transparent 60%);}
-    .header-grid{position:absolute;inset:0;background-image:
-      linear-gradient(var(--line) 1px,transparent 1px),
-      linear-gradient(90deg,var(--line) 1px,transparent 1px);
-      background-size:60px 60px;opacity:.35}
-    .hero{position:relative;z-index:1;text-align:center;max-width:780px;padding:36px 0}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef2ff;border:1px solid var(--line);color:#475569;font-size:12px;margin-bottom:14px}
-    .chip .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
-    h1{font-size:clamp(1.8rem,6vw,3rem);line-height:1.15;margin:.2rem 0 .6rem;letter-spacing:-.02em;background:linear-gradient(135deg,#111,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{color:var(--muted);font-size:clamp(.98rem,2.8vw,1.08rem);max-width:62ch;margin:0 auto 18px}
-    .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;background:#111;color:#fff;border-radius:10px;font-weight:600;text-decoration:none;min-height:44px}
-    .cta:focus-visible{outline:none;box-shadow:var(--ring)}
+    /* Hero */
+    header{position:relative;overflow:hidden;background:
+      radial-gradient(1200px 520px at 50% -10%, #eef4ff 0%, transparent 60%),
+      linear-gradient(180deg,#fff,#fff)}
+    .hero{display:grid;place-items:center;min-height:68vh}
+    .hero-inner{max-width:880px;text-align:center;padding:42px 0}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef2ff;border:1px solid var(--line);color:#475569;font-size:12px;margin-bottom:12px}
+    .chip .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    h1{font-size:clamp(1.8rem,5.6vw,3.2rem);line-height:1.12;margin:.3rem 0 .7rem;letter-spacing:-.02em;background:linear-gradient(135deg,#111,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:clamp(1rem,3vw,1.125rem);color:var(--muted);max-width:70ch;margin:0 auto 16px}
+    .cta-row{display:grid;grid-template-columns:1fr;gap:10px;justify-items:center;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;min-height:44px;font-weight:700}
+    .btn.primary{background:#111;color:#fff}
+    .btn.ghost{background:#fff;border:1px solid var(--line);color:#111}
+    @media (min-width:720px){ .cta-row{grid-template-columns:auto auto} .btn{width:auto} }
 
-    /* Section headers */
-    .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#6b7280;margin-bottom:10px}
-    .h2{font-size:clamp(1.3rem,3.2vw,1.9rem);font-weight:800;letter-spacing:-.01em;margin:0 0 22px}
-
-    /* Grids */
-    .grid-3{display:grid;grid-template-columns:1fr;gap:14px}
-    .grid-2{display:grid;grid-template-columns:1fr;gap:14px}
-    @media (min-width:720px){ .grid-3{grid-template-columns:repeat(3,1fr);gap:18px} .grid-2{grid-template-columns:1fr 1fr;gap:18px} }
-
-    /* Cards / boxes */
+    /* Labels, headings */
+    .label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#6b7280;margin-bottom:8px}
+    .h2{font-size:clamp(1.25rem,3vw,1.9rem);font-weight:800;letter-spacing:-.01em;margin:0 0 18px}
+    .muted{color:var(--muted)}
     .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
     .box{background:var(--subtle);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
 
-    /* Value grid (3 cols -> 1 on mobile) */
+    /* Grids (mobile-first) */
+    .grid-2{display:grid;grid-template-columns:1fr;gap:14px}
+    .grid-3{display:grid;grid-template-columns:1fr;gap:14px}
+    .grid-4{display:grid;grid-template-columns:1fr;gap:14px}
+    @media (min-width:720px){
+      .grid-2{grid-template-columns:1fr 1fr;gap:18px}
+      .grid-3{grid-template-columns:repeat(3,1fr);gap:18px}
+      .grid-4{grid-template-columns:repeat(4,1fr);gap:18px}
+    }
+
+    /* Value triptych */
     .value{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .value-cell{background:#fff;padding:22px}
-    .value-cell.highlight{background:#111;color:#fff}
-    .value-cell h3{font-size:15px;font-weight:700;margin:0 0 12px}
-    .value-cell ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-    .value-cell li{font-size:14px;color:#444}
-    .value-cell.highlight li{color:#f5f5f5}
+    .value > div{background:#fff;padding:20px}
+    .value .highlight{background:#111;color:#fff}
+    .value h3{font-size:15px;margin:0 0 10px}
+    .value ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+    .value li{font-size:14px;color:#444}
+    .value .highlight li{color:#f5f5f5}
     @media (min-width:720px){ .value{grid-template-columns:repeat(3,1fr)} }
 
-    /* Context + Why Company */
-    .context{max-width:720px;margin:0 auto;display:grid;gap:12px}
-    .why{border-left:3px solid var(--accent);padding:14px;border-radius:10px;background:#f8fbff}
+    /* Proof metrics */
+    .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .kpi{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+    .kpi b{display:block;font-size:clamp(1.05rem,3vw,1.3rem);color:#0b1220}
+    @media (min-width:720px){ .kpis{grid-template-columns:repeat(4,1fr)} }
 
     /* Cases */
     .cases{display:grid;grid-template-columns:1fr;gap:16px}
     @media (min-width:720px){ .cases{grid-template-columns:1fr 1fr} }
-    .case{border:1px solid var(--line);border-radius:12px;padding:18px;transition:.2s}
+    .case{border:1px solid var(--line);border-radius:14px;padding:18px;transition:.2s;background:#fff}
     .case:hover{border-color:#111;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-    .case .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin-bottom:10px}
-    .case .title{font-size:18px;font-weight:700;margin-bottom:10px}
-    .case h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin:12px 0 6px}
+    .case .tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin-bottom:8px}
+    .case .title{font-size:18px;font-weight:800;margin-bottom:8px}
+    .case h4{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin:10px 0 6px}
     .case p{font-size:14px;color:#525252;margin:0}
-    .metrics{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+    .metrics{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
     .metric{min-width:44%}
     .metric .v{font-weight:800;font-size:clamp(1.05rem,3.2vw,1.25rem)}
     .metric .l{font-size:12px;color:#6b7280}
 
-    /* Stats inline */
-    .stats{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
-    .stat{text-align:center}
-    .stat .sv{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;letter-spacing:-.02em}
-    .stat .sl{font-size:12px;color:#6b7280}
+    /* Artifacts */
+    .artifact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+    .artifact b{display:block;margin-bottom:6px}
+    .artifact p{color:#525252;margin:0}
+    .artifact a{white-space:nowrap}
 
-    /* Tools list */
-    .tools{max-width:720px;margin:0 auto}
-    .tool-row{display:flex;flex-direction:column;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
-    .tool-row:last-child{border-bottom:none}
-    .tool-cat{font-size:13px;font-weight:700;color:#111}
-    .tool-items{display:flex;gap:8px;flex-wrap:wrap}
-    .chip2{font-size:13px;color:#475569;background:#f5f7fb;padding:6px 10px;border-radius:8px;border:1px solid var(--line)}
+    /* Why company box */
+    .why{border-left:3px solid var(--accent);padding:14px;border-radius:10px;background:#f0f6ff}
 
-    /* Focus styles */
-    a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-radius:8px}
-
-    footer{padding:34px 20px;border-top:1px solid var(--line);text-align:center;color:#6b7280}
+    /* Footer */
+    footer{padding:34px 18px;border-top:1px solid var(--line);text-align:center;color:#6b7280}
   </style>
 </head>
 <body>
 
   <!-- Sticky top navigation -->
-  <div class="topbar">
-    <div class="container topbar-inner">
+  <div class="top">
+    <div class="container top-inner">
       <div class="brand">Zakaria Gallouch</div>
       <nav class="nav" aria-label="Sections">
-        <a href="#positioning">Positioning</a>
-        <a href="#evidence">Evidence</a>
-        <a href="#performance">Performance</a>
-        <a href="#stack">Stack</a>
+        <a href="#approach">Approach</a>
+        <a href="#proof">Proof</a>
+        <a href="#cases">Case Studies</a>
+        <a href="#artifacts">Artifacts</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </div>
 
-  <!-- Header -->
+  <!-- Hero -->
   <header>
-    <div class="header-bg"></div>
-    <div class="header-grid"></div>
     <div class="hero">
-      <div class="chip"><span class="dot" aria-hidden="true"></span> Application · Product Marketing Manager</div>
-      <h1>10 years turning complex B2B into product stories sales can sell and users adopt</h1>
-      <p class="lead">
-        From aviation finance to data intelligence platforms, I translate technical value into clear positioning, PMM artifacts and enablement that move pipeline and adoption.
-      </p>
-      <p class="lead" style="margin-bottom:22px;">
-        Based in Casablanca · EMEA focus · Fluent in narrative, GTM and media.
-      </p>
-      <a class="cta" href="mailto:ga.zakaria@gmail.com">Get in touch →</a>
+      <div class="container hero-inner">
+        <div class="chip"><span class="dot" aria-hidden="true"></span> Ecosystem-led Product Clarity</div>
+        <h1>I help tech & innovation ecosystems turn ideas into adoption</h1>
+        <p class="lead">
+          Strategic communications embedded in entrepreneur networks, innovation clusters and digital communities.
+          I bridge <b>UX insight</b>, <b>benchmarks</b> and <b>go-to-market clarity</b> so complex products become understandable, trusted and used.
+        </p>
+        <p class="lead">Casablanca hub · EMEA scope · English & French</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:ga.zakaria@gmail.com">Get in touch →</a>
+          <a class="btn ghost" href="#cases">See proof in action</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Context + Why Company -->
-  <section class="section" aria-labelledby="context">
+  <!-- Approach -->
+  <section id="approach" class="section" aria-labelledby="approach-title">
     <div class="container">
-      <div class="label">Context</div>
-      <h2 id="context" class="h2">Why this role is a fit</h2>
-      <div class="context">
+      <div class="label">Approach</div>
+      <h2 id="approach-title" class="h2">From ecosystems to enablement — clarity that scales</h2>
+      <div class="value">
+        <div>
+          <h3>Embedded in Tech Networks</h3>
+          <ul>
+            <li>Active within entrepreneur communities & innovation clusters</li>
+            <li>Fluent with founder pain points and stakeholder dynamics</li>
+            <li>Bridge teams: product, design, comms and community</li>
+          </ul>
+        </div>
+        <div class="highlight">
+          <h3>Product-Adjacent, Not Overclaiming</h3>
+          <ul>
+            <li>UX inputs: research signals, feedback, benchmarks</li>
+            <li>Message architecture for technical audiences</li>
+            <li>Content systems that support adoption & trust</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Outcomes You Can Expect</h3>
+          <ul>
+            <li>Clearer positioning & shorter approval cycles</li>
+            <li>Reusable enablement across markets/teams</li>
+            <li>Measurable engagement, sign-ups and usage signals</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-top:16px">
         <div class="box">
-          I’ve worked across UM6P’s AgriTech ecosystem, covered PE actors and market-intelligence solutions for CIO Mag, and helped SaaS teams compete in crowded categories. Your focus on <b>data intelligence for investors, analysts and legal decision-makers</b> maps to the environments where I already ship PMM work.
+          <b>Why this fits an IT Product Marketing mission</b>
+          <ul style="margin:8px 0 0 18px" class="muted">
+            <li>Translate technical value into user-ready language</li>
+            <li>Coordinate go-to-market with cross-functional teams</li>
+            <li>Build content & enablement that drives adoption</li>
+          </ul>
         </div>
         <div class="why">
-          <b>Why [Company]</b> — replace with 3 bullets tailored to each application:
-          <ul style="margin:10px 0 0 16px;color:#475569">
-            <li>ICP mirror: [e.g., deal teams, legal ops, research analysts].</li>
-            <li>Motion priority: [e.g., activation → expansion in EMEA].</li>
-            <li>Where I help now: message house, launch brief, enablement loop.</li>
+          <b>Why [Company]</b> — tailor for each application:
+          <ul style="margin:8px 0 0 18px" class="muted">
+            <li>Buyer mirror: investors / analysts / legal decision-makers</li>
+            <li>Motion: activation → expansion across EMEA</li>
+            <li>Where I plug in now: message house, launch brief, enablement loop</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Positioning -->
-  <section id="positioning" class="section" aria-labelledby="pos">
+  <!-- Proof metrics -->
+  <section id="proof" class="section" aria-labelledby="proof-title">
     <div class="container">
-      <div class="label">Positioning</div>
-      <h2 id="pos" class="h2">What’s different about this profile</h2>
-      <div class="value">
-        <div class="value-cell">
-          <h3>Core PMM</h3>
-          <ul>
-            <li>GTM strategy & launch planning</li>
-            <li>Product positioning & messaging</li>
-            <li>Sales enablement & feedback loops</li>
-            <li>Campaign execution & reporting</li>
-          </ul>
-        </div>
-        <div class="value-cell highlight">
-          <h3>My PMM Edge (Comms × PMM)</h3>
-          <ul>
-            <li>Message architecture for complex buyers</li>
-            <li>Media relations & exec comms when needed</li>
-            <li>Crisis-ready language & trust signals</li>
-            <li>AI-assisted research & workflows</li>
-          </ul>
-        </div>
-        <div class="value-cell">
-          <h3>Your Outcome</h3>
-          <ul>
-            <li>Faster launches, clearer story</li>
-            <li>Enablement that shortens cycles</li>
-            <li>Consistency across markets</li>
-            <li>Measurable pipeline/adoption impact</li>
-          </ul>
-        </div>
+      <div class="label">Proof, not promises</div>
+      <h2 id="proof-title" class="h2">Ecosystem campaigns with measurable outcomes</h2>
+      <div class="kpis">
+        <div class="kpi"><b>10M+</b><span class="muted">organic & earned reach</span></div>
+        <div class="kpi"><b>30+</b><span class="muted">message frameworks shipped</span></div>
+        <div class="kpi"><b>−30%</b><span class="muted">approval cycle time (positioning)</span></div>
+        <div class="kpi"><b>+19%</b><span class="muted">conversion after trust cues</span></div>
       </div>
     </div>
   </section>
 
-  <!-- PMM Artifacts (new strip) -->
-  <section class="section" aria-labelledby="artifacts">
+  <!-- Case Studies -->
+  <section id="cases" class="section" aria-labelledby="cases-title">
     <div class="container">
-      <div class="label">Artifacts</div>
-      <h2 id="artifacts" class="h2">PMM building blocks I ship</h2>
-      <div class="grid-4 grid-2">
-        <div class="card">
-          <b>Message House</b>
-          <p style="color:#525252;margin:.4rem 0 0">One-pager aligning value pillars to proof & objections. <a href="#">View sample →</a></p>
-        </div>
-        <div class="card">
-          <b>ICP / Segments</b>
-          <p style="color:#525252;margin:.4rem 0 0">Roles, pains, triggers, proof asks. <a href="#">View sample →</a></p>
-        </div>
-        <div class="card">
-          <b>Launch Brief</b>
-          <p style="color:#525252;margin:.4rem 0 0">Problem, narrative, assets, owners, KPIs. <a href="#">View sample →</a></p>
-        </div>
-        <div class="card">
-          <b>Sales One-pager</b>
-          <p style="color:#525252;margin:.4rem 0 0">Talk track + competitive snapshots. <a href="#">View sample →</a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Evidence / Case studies -->
-  <section id="evidence" class="section" aria-labelledby="evi">
-    <div class="container">
-      <div class="label">Evidence</div>
-      <h2 id="evi" class="h2">Selected work in complex B2B</h2>
+      <div class="label">Case studies</div>
+      <h2 id="cases-title" class="h2">How the narrative becomes adoption</h2>
 
       <div class="cases">
+        <!-- Fan4All -->
         <article class="case">
-          <div class="tag">Aviation Finance · Botanicals</div>
-          <div class="title">ABL Corporation</div>
+          <div class="tag">Platforms & Communities</div>
+          <div class="title">Fan4All — creator-led adoption playbook</div>
           <h4>Context</h4>
-          <p>International investment group needed unified positioning across 4 technical verticals.</p>
-          <h4>Work</h4>
-          <p>Message house, GTM frameworks, editorial governance for multi-stakeholder approvals.</p>
+          <p>Tech marketplace needed messaging clarity and community-driven activation.</p>
+          <h4>My contribution</h4>
+          <p>Positioning, creator briefs, trust messaging for PDPs, partner toolkits.</p>
           <div class="metrics">
-            <div class="metric"><div class="v">-30%</div><div class="l">approval cycle time</div></div>
-            <div class="metric"><div class="v">+1.4×</div><div class="l">content reuse across units</div></div>
-          </div>
-        </article>
-
-        <article class="case">
-          <div class="tag">SportTech Platform</div>
-          <div class="title">Fan4All</div>
-          <h4>Context</h4>
-          <p>Sports marketplace launching in a competitive EU market.</p>
-          <h4>Work</h4>
-          <p>Positioning, creator playbook, partner packs, PR with clubs.</p>
-          <div class="metrics">
-            <div class="metric"><div class="v">+28%</div><div class="l">CTR video → PDP</div></div>
+            <div class="metric"><div class="v">+28%</div><div class="l">CTR video → product pages</div></div>
             <div class="metric"><div class="v">+19%</div><div class="l">CVR after trust cues</div></div>
           </div>
         </article>
 
+        <!-- ATDA -->
         <article class="case">
-          <div class="tag">Tech Summit</div>
-          <div class="title">ATDA</div>
+          <div class="tag">Market Authority & Ecosystems</div>
+          <div class="title">ATDA — data transformation narrative</div>
           <h4>Context</h4>
-          <p>10th anniversary of Africa Digital Transformation summit, first time hosted in Africa.</p>
-          <h4>Work</h4>
-          <p>Video-first strategy (documentary + KOL capsules) and PR angles per stakeholder.</p>
+          <p>High-stakes summit needed a content engine to position as a data innovation hub.</p>
+          <h4>My contribution</h4>
+          <p>Video-first, 100% organic: documentary backbone + KOL capsules, stakeholder angles.</p>
           <div class="metrics">
             <div class="metric"><div class="v">3M</div><div class="l">organic reach</div></div>
-            <div class="metric"><div class="v">+42%</div><div class="l">community growth</div></div>
+            <div class="metric"><div class="v">40+</div><div class="l">C-level advocates</div></div>
           </div>
         </article>
 
+        <!-- CIO Mag -->
         <article class="case">
-          <div class="tag">Crisis Communications</div>
-          <div class="title">Glovo Morocco</div>
+          <div class="tag">Data & Market Intelligence</div>
+          <div class="title">CIO Mag — insight-driven content orchestration</div>
           <h4>Context</h4>
-          <p>Geopolitical tensions affecting brand sentiment.</p>
-          <h4>Work</h4>
-          <p>E-reputation monitoring, crisis framework, human-centred video series.</p>
+          <p>B2B audience (CIOs, PE/VC, policy) seeking credible data-led stories.</p>
+          <h4>My contribution</h4>
+          <p>Sponsored editorial & campaign coordination, analytics-based iteration.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">200K+</div><div class="l">readership / edition</div></div>
+            <div class="metric"><div class="v">↑</div><div class="l">ROI per sponsored content</div></div>
+          </div>
+        </article>
+
+        <!-- Glovo -->
+        <article class="case">
+          <div class="tag">Trust & Brand Intelligence</div>
+          <div class="title">Glovo — sentiment-aware trust layers</div>
+          <h4>Context</h4>
+          <p>Market sensitivity requiring careful narrative aligned with user concerns.</p>
+          <h4>My contribution</h4>
+          <p>Monitoring + human-centric content to improve sentiment & consistency.</p>
           <div class="metrics">
             <div class="metric"><div class="v">1.3M</div><div class="l">video reach</div></div>
             <div class="metric"><div class="v">13.5K</div><div class="l">engagements</div></div>
           </div>
         </article>
+
+        <!-- ABL -->
+        <article class="case">
+          <div class="tag">Multi-Vertical Positioning</div>
+          <div class="title">ABL — unified message architecture</div>
+          <h4>Context</h4>
+          <p>Group operating across technical verticals needed cross-unit clarity.</p>
+          <h4>My contribution</h4>
+          <p>Message house + governance to accelerate approvals and reuse.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">−30%</div><div class="l">approval cycle time</div></div>
+            <div class="metric"><div class="v">1.4×</div><div class="l">content reuse across units</div></div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Performance -->
-  <section id="performance" class="section" aria-labelledby="perf">
+  <!-- Artifacts -->
+  <section id="artifacts" class="section" aria-labelledby="artifacts-title">
     <div class="container">
-      <div class="label">Performance</div>
-      <h2 id="perf" class="h2">Cumulative results across 10+ years</h2>
-      <div class="stats">
-        <div class="stat"><div class="sv">10M+</div><div class="sl">organic reach</div></div>
-        <div class="stat"><div class="sv">€100K+</div><div class="sl">earned media</div></div>
-        <div class="stat"><div class="sv">50+</div><div class="sl">brands served</div></div>
-        <div class="stat"><div class="sv">3</div><div class="sl">continents shipped</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stack -->
-  <section id="stack" class="section" aria-labelledby="stackh">
-    <div class="container">
-      <div class="label">Infrastructure</div>
-      <h2 id="stackh" class="h2">Tools & certifications</h2>
-      <div class="tools">
-        <div class="tool-row">
-          <div class="tool-cat">Marketing Automation</div>
-          <div class="tool-items">
-            <span class="chip2">HubSpot ✓</span><span class="chip2">Salesforce</span><span class="chip2">Mailchimp</span><span class="chip2">ActiveCampaign</span>
-          </div>
+      <div class="label">Artifacts</div>
+      <h2 id="artifacts-title" class="h2">What I actually ship for teams</h2>
+      <div class="grid-4">
+        <div class="artifact">
+          <b>Message House</b>
+          <p class="muted">Value pillars → proof → objection handling. <a href="#">View sample →</a></p>
         </div>
-        <div class="tool-row">
-          <div class="tool-cat">Analytics & SEO</div>
-          <div class="tool-items">
-            <span class="chip2">GA ✓</span><span class="chip2">Google Ads ✓</span><span class="chip2">Search Console</span><span class="chip2">SEMrush</span><span class="chip2">Ahrefs</span>
-          </div>
+        <div class="artifact">
+          <b>Buyer & Stakeholder Maps</b>
+          <p class="muted">Roles, pains, desired outcomes, triggers. <a href="#">View sample →</a></p>
         </div>
-        <div class="tool-row">
-          <div class="tool-cat">PM & Collab</div>
-          <div class="tool-items">
-            <span class="chip2">ClickUp</span><span class="chip2">Slack</span><span class="chip2">Teams</span><span class="chip2">Asana</span><span class="chip2">Notion</span>
-          </div>
+        <div class="artifact">
+          <b>Launch / Campaign Brief</b>
+          <p class="muted">Narrative, assets, channels, owners, KPIs. <a href="#">View sample →</a></p>
         </div>
-        <div class="tool-row">
-          <div class="tool-cat">Content & Design</div>
-          <div class="tool-items">
-            <span class="chip2">Figma</span><span class="chip2">Canva Pro</span><span class="chip2">Adobe CC</span><span class="chip2">Premiere</span>
-          </div>
+        <div class="artifact">
+          <b>Enablement One-Pagers</b>
+          <p class="muted">Talk tracks, trust cues, competitive snapshots. <a href="#">View sample →</a></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section" aria-labelledby="cont">
+  <section id="contact" class="section" aria-labelledby="contact-title">
     <div class="container">
       <div class="label">Let’s talk</div>
-      <h2 id="cont" class="h2">Available for conversation</h2>
+      <h2 id="contact-title" class="h2">Ready to bring clarity to complex tech</h2>
       <div class="card" style="text-align:center">
-        <p style="color:#6b7280;max-width:60ch;margin:0 auto 14px">
-          I’m ready to help you sharpen PMM, accelerate GTM and make complex value obvious.
+        <p class="muted" style="max-width:60ch;margin:0 auto 14px">
+          I partner with product, design and comms to translate value, align teams and drive adoption — without overclaiming what I haven’t done.
         </p>
-        <div style="display:grid;gap:10px;grid-template-columns:1fr">
-          <a class="cta" href="mailto:ga.zakaria@gmail.com">ga.zakaria@gmail.com</a>
-          <a class="cta" href="tel:+212627056916" style="background:#fff;color:#111;border:1px solid var(--line)">+212 627 056 916</a>
-          <a class="cta" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener" style="background:#fff;color:#111;border:1px solid var(--line)">LinkedIn Profile</a>
+        <div class="grid-2" style="justify-items:center">
+          <a class="btn primary" href="mailto:ga.zakaria@gmail.com">ga.zakaria@gmail.com</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">LinkedIn Profile</a>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    Built by <a href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener" style="color:#111;text-decoration:none;border-bottom:1px solid var(--line)">Zakaria Gallouch</a>
+    © <span id="y"></span> Zakaria Gallouch · Built for ecosystem-driven product clarity
   </footer>
 
   <script>
-    // Respect reduced motion
+    document.getElementById('y').textContent = new Date().getFullYear();
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.style.scrollBehavior = 'auto';
     }
