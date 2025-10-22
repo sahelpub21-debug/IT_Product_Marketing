@@ -56,7 +56,7 @@
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;min-height:44px;font-weight:700}
     .btn.primary{background:#111;color:#fff}
     .btn.ghost{background:#fff;border:1px solid var(--line);color:#111}
-    @media (min-width:720px){ .cta-row{grid-template-columns:auto auto} .btn{width:auto} }
+    @media (min-width:720px){ .btn{width:auto} }
 
     /* Labels, headings */
     .label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#6b7280;margin-bottom:8px}
@@ -151,9 +151,8 @@
         </p>
         <p class="lead">Casablanca hub · EMEA scope · English & French</p>
         <div class="cta-row">
-          <!-- Get in touch -> LinkedIn -->
-          <a class="btn primary" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">Get in touch →</a>
-          <a class="btn ghost" href="#cases">See proof in action</a>
+          <!-- SINGLE CTA in header -->
+          <a class="btn primary" href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noopener">Schedule Interview</a>
         </div>
       </div>
     </div>
@@ -165,7 +164,7 @@
       <div class="label">Approach</div>
       <h2 id="approach-title" class="h2">From ecosystems to enablement — clarity that scales</h2>
 
-      <!-- Segmented control (SaaS vibe) -->
+      <!-- Segmented control -->
       <div class="segments" role="tablist" aria-label="Process">
         <span class="seg active" role="tab" aria-selected="true">Personas</span>
         <span class="seg" role="tab">Positioning</span>
@@ -286,49 +285,60 @@
     </div>
   </section>
 
-  <!-- Artifacts -->
+  <!-- Artifacts (now linked to HPS) -->
   <section id="artifacts" class="section" aria-labelledby="artifacts-title">
     <div class="container">
       <div class="label">Artifacts</div>
       <h2 id="artifacts-title" class="h2">What I actually ship for teams</h2>
       <div class="grid-4">
         <div class="artifact">
-          <b>Message House</b>
-          <p class="muted">Value pillars → proof → objections.</p>
+          <b>Buyer & Stakeholder Maps</b>
+          <p class="muted">Decision ecosystem: roles, pains, proof asks, objections.</p>
           <details>
             <summary>Preview</summary>
-            <div>Core value → 3 pillars → proof bullets → objection handling. (Replace with real excerpt.)</div>
+            <div>Stakeholder mapping for a regulated payments platform (CIO/CTO, CDO, Ops, Compliance) with content per role.</div>
           </details>
-          <p style="margin-top:8px"><a href="/assets/message-house-sample.pdf" download>Download sample (PDF)</a> <!-- TODO: replace link --></p>
+          <p style="margin-top:8px">
+            <a href="https://sahelpub21-debug.github.io/HPS/" target="_blank" rel="noopener">View HPS sample →</a>
+          </p>
         </div>
         <div class="artifact">
-          <b>Buyer & Stakeholder Maps</b>
-          <p class="muted">Roles, pains, outcomes, triggers.</p>
+          <b>Message House</b>
+          <p class="muted">Value proposition → pillars → proof → objection handling.</p>
           <details>
             <summary>Preview</summary>
-            <div>Persona grid: Role • Pain • Desired outcome • Proof asks • Objections. (Replace with real excerpt.)</div>
+            <div>“Innovation / Reliability / Partnership” pillars mapped to proof points and supporting content.</div>
           </details>
-          <p style="margin-top:8px"><a href="/assets/buyer-map-sample.pdf" download>Download sample (PDF)</a></p>
+          <p style="margin-top:8px">
+            <a href="https://sahelpub21-debug.github.io/HPS/" target="_blank" rel="noopener">View HPS sample →</a>
+          </p>
         </div>
         <div class="artifact">
           <b>Launch / Campaign Brief</b>
-          <p class="muted">Narrative, assets, channels, owners, KPIs.</p>
+          <p class="muted">Narrative, assets, channels, owners, KPIs (90-day plan).</p>
           <details>
             <summary>Preview</summary>
-            <div>Problem → Narrative → Channels → Asset list → Owners → KPI tree. (Replace with real excerpt.)</div>
+            <div>Foundation → Quick Wins → Scale & Optimize, with success metrics & governance.</div>
           </details>
-          <p style="margin-top:8px"><a href="/assets/launch-brief-sample.pdf" download>Download sample (PDF)</a></p>
+          <p style="margin-top:8px">
+            <a href="https://sahelpub21-debug.github.io/HPS/" target="_blank" rel="noopener">View HPS sample →</a>
+          </p>
         </div>
         <div class="artifact">
           <b>Enablement One-Pagers</b>
-          <p class="muted">Talk tracks, trust cues, competitive snapshots.</p>
+          <p class="muted">Talk tracks, trust cues, competitive deltas & objections.</p>
           <details>
             <summary>Preview</summary>
-            <div>Pitch spine • Proof points • Competitive deltas • Common objections. (Replace with real excerpt.)</div>
+            <div>ABM framework by segment (Tier-1 banks, neobanks, processors), sales enablement integration and attribution model.</div>
           </details>
-          <p style="margin-top:8px"><a href="/assets/onepager-sample.pdf" download>Download sample (PDF)</a></p>
+          <p style="margin-top:8px">
+            <a href="https://sahelpub21-debug.github.io/HPS/" target="_blank" rel="noopener">View HPS sample →</a>
+          </p>
         </div>
       </div>
+      <p class="muted" style="margin-top:12px">
+        *Public excerpts from a market discovery / brand audit built for HPS Worldwide (payments tech).*
+      </p>
     </div>
   </section>
 
@@ -342,9 +352,9 @@
           I partner with product, design and comms to translate value, align teams and drive adoption — without overclaiming what I haven’t done.
         </p>
         <div class="grid-3" style="justify-items:center">
-          <a class="btn primary" href="https://calendly.com/zakariagallouch/intro" target="_blank" rel="noopener">Schedule interview</a> <!-- TODO: replace Calendly slug -->
+          <a class="btn primary" href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noopener">Schedule interview</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">Leave message on LinkedIn</a>
-          <a class="btn ghost" href="https://your-website.tld" target="_blank" rel="noopener">Visit my website</a> <!-- TODO: replace URL -->
+          <a class="btn ghost" href="https://your-website.tld" target="_blank" rel="noopener">Visit my website</a>
         </div>
       </div>
     </div>
