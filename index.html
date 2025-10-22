@@ -1,777 +1,377 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakaria Gallouch - Product Marketing Solution</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --primary: #6366f1;
-            --secondary: #8b5cf6;
-            --accent: #10b981;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --gray: #64748b;
-            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background: var(--light);
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: var(--gradient);
-            color: white;
-            padding: 120px 20px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><rect width="1" height="1" fill="white" opacity="0.1"/></svg>');
-            opacity: 0.3;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-label {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            opacity: 0.95;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 15px 35px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            font-size: 16px;
-        }
-        
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .btn-secondary {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
-        
-        /* Section */
-        section {
-            padding: 80px 20px;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: var(--dark);
-        }
-        
-        /* Value Prop */
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-        }
-        
-        .value-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-        }
-        
-        .value-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        
-        .value-card ul {
-            list-style: none;
-        }
-        
-        .value-card li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .value-card li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-        }
-        
-        .value-card.highlight {
-            background: var(--gradient);
-            color: white;
-        }
-        
-        .value-card.highlight h3 {
-            color: white;
-        }
-        
-        .value-card.highlight li::before {
-            color: white;
-        }
-        
-        /* Why Section */
-        .why-box {
-            background: var(--dark);
-            color: white;
-            padding: 60px;
-            border-radius: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .why-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            color: var(--accent);
-        }
-        
-        .why-box p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-        
-        /* Case Studies */
-        .case-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .case-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        }
-        
-        .case-header {
-            background: var(--gradient);
-            color: white;
-            padding: 30px;
-        }
-        
-        .case-label {
-            font-size: 12px;
-            font-weight: 600;
-            opacity: 0.9;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .case-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .case-body {
-            padding: 30px;
-        }
-        
-        .case-section {
-            margin-bottom: 20px;
-        }
-        
-        .case-section h4 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: var(--gray);
-            margin-bottom: 8px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        
-        .case-section p {
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        .case-metrics {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 2px solid #f1f5f9;
-        }
-        
-        .metric {
-            flex: 1;
-            min-width: 120px;
-        }
-        
-        .metric-value {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-        }
-        
-        .metric-label {
-            font-size: 0.85rem;
-            color: var(--gray);
-            margin-top: 5px;
-        }
-        
-        /* Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-        
-        .feature-item {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 4px solid var(--primary);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        
-        .feature-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-        
-        .feature-item p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-        
-        /* Stats Dashboard */
-        .stats-dashboard {
-            background: var(--dark);
-            color: white;
-            padding: 60px;
-            border-radius: 20px;
-            margin: 40px 0;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-        
-        .stat-item {
-            padding: 20px;
-        }
-        
-        .stat-value {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-        
-        /* Certifications */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cert-badge {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
-            border: 2px solid #f1f5f9;
-            transition: all 0.3s ease;
-        }
-        
-        .cert-badge:hover {
-            border-color: var(--primary);
-            transform: scale(1.05);
-        }
-        
-        .cert-badge strong {
-            display: block;
-            color: var(--primary);
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--gradient);
-            color: white;
-            text-align: center;
-            padding: 80px 20px;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.95;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 80px 20px 60px;
-            }
-            
-            section {
-                padding: 60px 20px;
-            }
-            
-            .why-box {
-                padding: 40px 30px;
-            }
-            
-            .stats-dashboard {
-                padding: 40px 30px;
-            }
-            
-            .stat-value {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zakaria Gallouch — Product Marketing Manager</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Zakaria Gallouch — Product Marketing Manager" />
+  <meta property="og:description" content="10 years turning complex B2B into clear product stories that sales can sell and users adopt. PMM + Comms edge." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{
+      --bg:#ffffff; --ink:#0a0a0a; --muted:#545961; --line:#e7e9ee; --subtle:#fafafa;
+      --accent:#2563eb; --accent-2:#0ea5e9; --radius:14px; --radius-lg:18px;
+      --shadow:0 10px 30px rgba(16,24,40,.08); --ring:0 0 0 3px rgba(37,99,235,.25);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    img{max-width:100%;height:auto;display:block}
+
+    /* Container & layout (mobile-first) */
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    .section{padding:48px 20px;border-top:1px solid var(--line)}
+    @media (min-width:720px){ .section{padding:72px 24px} }
+
+    /* Top nav (anchor) */
+    .topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav{display:none;gap:14px}
+    .nav a{color:var(--ink);text-decoration:none;font-weight:600;opacity:.85}
+    @media (min-width:720px){ .nav{display:flex} }
+
+    /* Header / Hero */
+    header{min-height:68vh;display:grid;place-items:center;position:relative;overflow:hidden}
+    .header-bg{position:absolute;inset:0;background:
+      radial-gradient(900px 420px at 50% -10%, rgba(37,99,235,.09) 0%, transparent 60%),
+      radial-gradient(700px 380px at 90% 90%, rgba(14,165,233,.08) 0%, transparent 60%);}
+    .header-grid{position:absolute;inset:0;background-image:
+      linear-gradient(var(--line) 1px,transparent 1px),
+      linear-gradient(90deg,var(--line) 1px,transparent 1px);
+      background-size:60px 60px;opacity:.35}
+    .hero{position:relative;z-index:1;text-align:center;max-width:780px;padding:36px 0}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef2ff;border:1px solid var(--line);color:#475569;font-size:12px;margin-bottom:14px}
+    .chip .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent-2))}
+    h1{font-size:clamp(1.8rem,6vw,3rem);line-height:1.15;margin:.2rem 0 .6rem;letter-spacing:-.02em;background:linear-gradient(135deg,#111,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{color:var(--muted);font-size:clamp(.98rem,2.8vw,1.08rem);max-width:62ch;margin:0 auto 18px}
+    .cta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;background:#111;color:#fff;border-radius:10px;font-weight:600;text-decoration:none;min-height:44px}
+    .cta:focus-visible{outline:none;box-shadow:var(--ring)}
+
+    /* Section headers */
+    .label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#6b7280;margin-bottom:10px}
+    .h2{font-size:clamp(1.3rem,3.2vw,1.9rem);font-weight:800;letter-spacing:-.01em;margin:0 0 22px}
+
+    /* Grids */
+    .grid-3{display:grid;grid-template-columns:1fr;gap:14px}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:14px}
+    @media (min-width:720px){ .grid-3{grid-template-columns:repeat(3,1fr);gap:18px} .grid-2{grid-template-columns:1fr 1fr;gap:18px} }
+
+    /* Cards / boxes */
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
+    .box{background:var(--subtle);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+
+    /* Value grid (3 cols -> 1 on mobile) */
+    .value{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .value-cell{background:#fff;padding:22px}
+    .value-cell.highlight{background:#111;color:#fff}
+    .value-cell h3{font-size:15px;font-weight:700;margin:0 0 12px}
+    .value-cell ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    .value-cell li{font-size:14px;color:#444}
+    .value-cell.highlight li{color:#f5f5f5}
+    @media (min-width:720px){ .value{grid-template-columns:repeat(3,1fr)} }
+
+    /* Context + Why Company */
+    .context{max-width:720px;margin:0 auto;display:grid;gap:12px}
+    .why{border-left:3px solid var(--accent);padding:14px;border-radius:10px;background:#f8fbff}
+
+    /* Cases */
+    .cases{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width:720px){ .cases{grid-template-columns:1fr 1fr} }
+    .case{border:1px solid var(--line);border-radius:12px;padding:18px;transition:.2s}
+    .case:hover{border-color:#111;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+    .case .tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin-bottom:10px}
+    .case .title{font-size:18px;font-weight:700;margin-bottom:10px}
+    .case h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin:12px 0 6px}
+    .case p{font-size:14px;color:#525252;margin:0}
+    .metrics{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+    .metric{min-width:44%}
+    .metric .v{font-weight:800;font-size:clamp(1.05rem,3.2vw,1.25rem)}
+    .metric .l{font-size:12px;color:#6b7280}
+
+    /* Stats inline */
+    .stats{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}
+    .stat{text-align:center}
+    .stat .sv{font-size:clamp(1.6rem,6vw,2.2rem);font-weight:800;letter-spacing:-.02em}
+    .stat .sl{font-size:12px;color:#6b7280}
+
+    /* Tools list */
+    .tools{max-width:720px;margin:0 auto}
+    .tool-row{display:flex;flex-direction:column;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+    .tool-row:last-child{border-bottom:none}
+    .tool-cat{font-size:13px;font-weight:700;color:#111}
+    .tool-items{display:flex;gap:8px;flex-wrap:wrap}
+    .chip2{font-size:13px;color:#475569;background:#f5f7fb;padding:6px 10px;border-radius:8px;border:1px solid var(--line)}
+
+    /* Focus styles */
+    a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-radius:8px}
+
+    footer{padding:34px 20px;border-top:1px solid var(--line);text-align:center;color:#6b7280}
+  </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-label">🚀 PRODUCT LAUNCH</div>
-            <h1>Your Next Product Marketing Solution for Data/AI/SaaS</h1>
-            <p class="hero-subtitle">10+ years transforming complex B2B narratives into measurable growth. Certified. Battle-tested. Ready to scale your EMEA expansion.</p>
-            <div class="cta-buttons">
-                <a href="mailto:ga.zakaria@gmail.com" class="btn btn-primary">Book a Discovery Call</a>
-                <a href="#case-studies" class="btn btn-secondary">See the Evidence</a>
-            </div>
+
+  <!-- Sticky top navigation -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">Zakaria Gallouch</div>
+      <nav class="nav" aria-label="Sections">
+        <a href="#positioning">Positioning</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#performance">Performance</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-bg"></div>
+    <div class="header-grid"></div>
+    <div class="hero">
+      <div class="chip"><span class="dot" aria-hidden="true"></span> Application · Product Marketing Manager</div>
+      <h1>10 years turning complex B2B into product stories sales can sell and users adopt</h1>
+      <p class="lead">
+        From aviation finance to data intelligence platforms, I translate technical value into clear positioning, PMM artifacts and enablement that move pipeline and adoption.
+      </p>
+      <p class="lead" style="margin-bottom:22px;">
+        Based in Casablanca · EMEA focus · Fluent in narrative, GTM and media.
+      </p>
+      <a class="cta" href="mailto:ga.zakaria@gmail.com">Get in touch →</a>
+    </div>
+  </header>
+
+  <!-- Context + Why Company -->
+  <section class="section" aria-labelledby="context">
+    <div class="container">
+      <div class="label">Context</div>
+      <h2 id="context" class="h2">Why this role is a fit</h2>
+      <div class="context">
+        <div class="box">
+          I’ve worked across UM6P’s AgriTech ecosystem, covered PE actors and market-intelligence solutions for CIO Mag, and helped SaaS teams compete in crowded categories. Your focus on <b>data intelligence for investors, analysts and legal decision-makers</b> maps to the environments where I already ship PMM work.
         </div>
-    </section>
-
-    <!-- Value Proposition -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Why This Profile Is Different</h2>
-            <div class="value-grid">
-                <div class="value-card">
-                    <h3>Traditional PMM</h3>
-                    <ul>
-                        <li>Strong on GTM strategy</li>
-                        <li>Product positioning expertise</li>
-                        <li>Sales enablement tools</li>
-                        <li>⚠️ Weak on corporate storytelling</li>
-                        <li>⚠️ Limited PR/media muscle</li>
-                        <li>⚠️ Siloed execution</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card highlight">
-                    <h3>This Solution (Me)</h3>
-                    <ul>
-                        <li>Product Marketing mindset</li>
-                        <li>+ Corporate Comms DNA</li>
-                        <li>+ PR & Media Relations</li>
-                        <li>+ Crisis-ready operator</li>
-                        <li>+ AI-powered workflows</li>
-                        <li>+ International scale (EMEA/Africa)</li>
-                    </ul>
-                </div>
-                
-                <div class="value-card">
-                    <h3>Your Results</h3>
-                    <ul>
-                        <li>Faster GTM execution</li>
-                        <li>Stronger brand narrative</li>
-                        <li>Media coverage amplification</li>
-                        <li>Crisis protection built-in</li>
-                        <li>Multi-market scalability</li>
-                        <li>Measurable pipeline impact</li>
-                    </ul>
-                </div>
-            </div>
+        <div class="why">
+          <b>Why [Company]</b> — replace with 3 bullets tailored to each application:
+          <ul style="margin:10px 0 0 16px;color:#475569">
+            <li>ICP mirror: [e.g., deal teams, legal ops, research analysts].</li>
+            <li>Motion priority: [e.g., activation → expansion in EMEA].</li>
+            <li>Where I help now: message house, launch brief, enablement loop.</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Why This Role -->
-    <section style="background: #f8fafc;">
-        <div class="container">
-            <div class="why-box">
-                <h3>Why This Role. Why Now.</h3>
-                <p>J'ai passé 3 ans à travailler avec l'écosystème UM6P sur les contenus AgriTech et l'innovation data-driven. J'ai couvert les acteurs du Private Equity, les plateformes SaaS B2B, et les solutions d'intelligence de marché pour CIO Mag. Votre positionnement sur la data intelligence pour investisseurs, analystes et décideurs légaux, c'est exactement le type de storytelling B2B complexe où j'excelle. Je comprends vos buyer personas. Je sais comment les atteindre. Et je suis prêt à accélérer votre expansion EMEA depuis votre hub de Casablanca.</p>
-            </div>
+  <!-- Positioning -->
+  <section id="positioning" class="section" aria-labelledby="pos">
+    <div class="container">
+      <div class="label">Positioning</div>
+      <h2 id="pos" class="h2">What’s different about this profile</h2>
+      <div class="value">
+        <div class="value-cell">
+          <h3>Core PMM</h3>
+          <ul>
+            <li>GTM strategy & launch planning</li>
+            <li>Product positioning & messaging</li>
+            <li>Sales enablement & feedback loops</li>
+            <li>Campaign execution & reporting</li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Case Studies -->
-    <section id="case-studies">
-        <div class="container">
-            <h2 class="section-title">Proven Impact Across Complex B2B Sectors</h2>
-            <div class="case-grid">
-                <!-- ABL Case -->
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-label">Aviation Finance • Botanicals • Hospitality</div>
-                        <div class="case-title">ABL Corporation</div>
-                    </div>
-                    <div class="case-body">
-                        <div class="case-section">
-                            <h4>Challenge</h4>
-                            <p>Diversified investment group needed unified brand positioning and content strategy across 4 complex B2B verticals</p>
-                        </div>
-                        <div class="case-section">
-                            <h4>Solution</h4>
-                            <p>Built comprehensive GTM frameworks, created 30+ thought leadership articles, established editorial governance for multi-stakeholder approval</p>
-                        </div>
-                        <div class="case-section">
-                            <h4>Results</h4>
-                            <p>Strategic alignment achieved with ready-to-deploy 6-month content roadmaps, empowered internal teams with clear processes</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAN4ALL Case -->
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-label">SportTech E-Commerce</div>
-                        <div class="case-title">FAN4ALL</div>
-                    </div>
-                    <div class="case-body">
-                        <div class="case-section">
-                            <h4>Challenge</h4>
-                            <p>French sports ticketing platform needed brand positioning, PR strategy, and conversion-focused campaigns</p>
-                        </div>
-                        <div class="case-section">
-                            <h4>Solution</h4>
-                            <p>Defined positioning vs. competitors, built PR strategy with club partnerships, executed multi-channel campaigns segmented by persona</p>
-                        </div>
-                        <div class="case-metrics">
-                            <div class="metric">
-                                <div class="metric-value">2.1M</div>
-                                <div class="metric-label">Cumulative Reach</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">€100K+</div>
-                                <div class="metric-label">PR Value</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">14.45%</div>
-                                <div class="metric-label">LinkedIn Engagement</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ATDA Case -->
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-label">Pan-African Tech Summit</div>
-                        <div class="case-title">ATDA 2021</div>
-                    </div>
-                    <div class="case-body">
-                        <div class="case-section">
-                            <h4>Challenge</h4>
-                            <p>10th anniversary of Africa Digital Transformation summit needed breakthrough marketing for first-time African hosting</p>
-                        </div>
-                        <div class="case-section">
-                            <h4>Solution</h4>
-                            <p>Developed video content strategy with KOL testimonials, corporate documentary, and PR campaign leveraging Morocco's positioning</p>
-                        </div>
-                        <div class="case-metrics">
-                            <div class="metric">
-                                <div class="metric-value">3M</div>
-                                <div class="metric-label">Organic Reach</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">+42%</div>
-                                <div class="metric-label">Community Growth</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Glovo Case -->
-                <div class="case-card">
-                    <div class="case-header">
-                        <div class="case-label">Crisis Communications</div>
-                        <div class="case-title">Glovo Morocco</div>
-                    </div>
-                    <div class="case-body">
-                        <div class="case-section">
-                            <h4>Challenge</h4>
-                            <p>Geopolitical tensions risked brand perception during Morocco-Spain diplomatic crisis</p>
-                        </div>
-                        <div class="case-section">
-                            <h4>Solution</h4>
-                            <p>Implemented e-reputation monitoring, developed crisis-ready comms plan, produced humanizing video series showcasing local team</p>
-                        </div>
-                        <div class="case-metrics">
-                            <div class="metric">
-                                <div class="metric-value">1.3M</div>
-                                <div class="metric-label">Video Reach</div>
-                            </div>
-                            <div class="metric">
-                                <div class="metric-value">13.5K</div>
-                                <div class="metric-label">Engagements</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="value-cell highlight">
+          <h3>My PMM Edge (Comms × PMM)</h3>
+          <ul>
+            <li>Message architecture for complex buyers</li>
+            <li>Media relations & exec comms when needed</li>
+            <li>Crisis-ready language & trust signals</li>
+            <li>AI-assisted research & workflows</li>
+          </ul>
         </div>
-    </section>
-
-    <!-- Stats Dashboard -->
-    <section>
-        <div class="container">
-            <div class="stats-dashboard">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value">10M+</div>
-                        <div class="stat-label">Organic Reach Generated</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">€100K+</div>
-                        <div class="stat-label">Earned Media Value</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">50+</div>
-                        <div class="stat-label">Brands Served</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value">3+</div>
-                        <div class="stat-label">Years Remote International</div>
-                    </div>
-                </div>
-            </div>
+        <div class="value-cell">
+          <h3>Your Outcome</h3>
+          <ul>
+            <li>Faster launches, clearer story</li>
+            <li>Enablement that shortens cycles</li>
+            <li>Consistency across markets</li>
+            <li>Measurable pipeline/adoption impact</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Features/Capabilities -->
-    <section style="background: #f8fafc;">
-        <div class="container">
-            <h2 class="section-title">Technical Stack & Capabilities</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🎯</div>
-                    <h4>Product Positioning</h4>
-                    <p>Messaging frameworks, competitive battlecards, value proposition development</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚀</div>
-                    <h4>GTM Strategy</h4>
-                    <p>Multi-channel campaign orchestration, launch planning, sales enablement</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📊</div>
-                    <h4>Data-Driven Marketing</h4>
-                    <p>Google Analytics, SEO optimization, performance tracking, ROI analysis</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🤖</div>
-                    <h4>AI-Powered Workflows</h4>
-                    <p>Leveraging AI agents for content ops automation and competitive intelligence</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚨</div>
-                    <h4>Crisis Communications</h4>
-                    <p>E-reputation management, crisis-ready frameworks, real-time response</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🌍</div>
-                    <h4>International Operator</h4>
-                    <p>EMEA/Africa markets, tri-lingual (FR/EN/AR), remote team coordination</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📝</div>
-                    <h4>Content Excellence</h4>
-                    <p>Thought leadership, SEO-driven writing, technical storytelling</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎬</div>
-                    <h4>Multimedia Production</h4>
-                    <p>Video strategy, editorial coordination, brand content campaigns</p>
-                </div>
-            </div>
+  <!-- PMM Artifacts (new strip) -->
+  <section class="section" aria-labelledby="artifacts">
+    <div class="container">
+      <div class="label">Artifacts</div>
+      <h2 id="artifacts" class="h2">PMM building blocks I ship</h2>
+      <div class="grid-4 grid-2">
+        <div class="card">
+          <b>Message House</b>
+          <p style="color:#525252;margin:.4rem 0 0">One-pager aligning value pillars to proof & objections. <a href="#">View sample →</a></p>
         </div>
-    </section>
-
-    <!-- Certifications -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Certified Capabilities</h2>
-            <div class="cert-grid">
-                <div class="cert-badge">
-                    🎓
-                    <strong>HubSpot Content Marketing</strong>
-                </div>
-                <div class="cert-badge">
-                    🎓
-                    <strong>HubSpot Inbound Marketing</strong>
-                </div>
-                <div class="cert-badge">
-                    🎓
-                    <strong>SEO Strategy</strong>
-                </div>
-                <div class="cert-badge">
-                    🎓
-                    <strong>Google Analytics</strong>
-                </div>
-                <div class="cert-badge">
-                    🎓
-                    <strong>Google Ads</strong>
-                </div>
-            </div>
+        <div class="card">
+          <b>ICP / Segments</b>
+          <p style="color:#525252;margin:.4rem 0 0">Roles, pains, triggers, proof asks. <a href="#">View sample →</a></p>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Accelerate Your Data Intelligence GTM?</h2>
-            <p>Let's discuss how I can drive measurable impact for your EMEA expansion from day one.</p>
-            <div class="cta-buttons">
-                <a href="mailto:ga.zakaria@gmail.com" class="btn btn-primary">ga.zakaria@gmail.com</a>
-                <a href="tel:+212627056916" class="btn btn-secondary">+212 627 056 916</a>
-            </div>
-            <p style="margin-top: 30px; font-size: 0.95rem; opacity: 0.9;">
-                📍 Based in Casablanca, Morocco<br>
-                🔗 <a href="https://www.linkedin.com/in/zakariagallouch" style="color: white; text-decoration: underline;">LinkedIn Profile</a>
-            </p>
+        <div class="card">
+          <b>Launch Brief</b>
+          <p style="color:#525252;margin:.4rem 0 0">Problem, narrative, assets, owners, KPIs. <a href="#">View sample →</a></p>
         </div>
-    </section>
+        <div class="card">
+          <b>Sales One-pager</b>
+          <p style="color:#525252;margin:.4rem 0 0">Talk track + competitive snapshots. <a href="#">View sample →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Zakaria Gallouch. Built with purpose for your Product Marketing Manager role.</p>
-        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">This landing page demonstrates the product marketing thinking you're looking for.</p>
-    </footer>
+  <!-- Evidence / Case studies -->
+  <section id="evidence" class="section" aria-labelledby="evi">
+    <div class="container">
+      <div class="label">Evidence</div>
+      <h2 id="evi" class="h2">Selected work in complex B2B</h2>
+
+      <div class="cases">
+        <article class="case">
+          <div class="tag">Aviation Finance · Botanicals</div>
+          <div class="title">ABL Corporation</div>
+          <h4>Context</h4>
+          <p>International investment group needed unified positioning across 4 technical verticals.</p>
+          <h4>Work</h4>
+          <p>Message house, GTM frameworks, editorial governance for multi-stakeholder approvals.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">-30%</div><div class="l">approval cycle time</div></div>
+            <div class="metric"><div class="v">+1.4×</div><div class="l">content reuse across units</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="tag">SportTech Platform</div>
+          <div class="title">Fan4All</div>
+          <h4>Context</h4>
+          <p>Sports marketplace launching in a competitive EU market.</p>
+          <h4>Work</h4>
+          <p>Positioning, creator playbook, partner packs, PR with clubs.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">+28%</div><div class="l">CTR video → PDP</div></div>
+            <div class="metric"><div class="v">+19%</div><div class="l">CVR after trust cues</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="tag">Tech Summit</div>
+          <div class="title">ATDA</div>
+          <h4>Context</h4>
+          <p>10th anniversary of Africa Digital Transformation summit, first time hosted in Africa.</p>
+          <h4>Work</h4>
+          <p>Video-first strategy (documentary + KOL capsules) and PR angles per stakeholder.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">3M</div><div class="l">organic reach</div></div>
+            <div class="metric"><div class="v">+42%</div><div class="l">community growth</div></div>
+          </div>
+        </article>
+
+        <article class="case">
+          <div class="tag">Crisis Communications</div>
+          <div class="title">Glovo Morocco</div>
+          <h4>Context</h4>
+          <p>Geopolitical tensions affecting brand sentiment.</p>
+          <h4>Work</h4>
+          <p>E-reputation monitoring, crisis framework, human-centred video series.</p>
+          <div class="metrics">
+            <div class="metric"><div class="v">1.3M</div><div class="l">video reach</div></div>
+            <div class="metric"><div class="v">13.5K</div><div class="l">engagements</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Performance -->
+  <section id="performance" class="section" aria-labelledby="perf">
+    <div class="container">
+      <div class="label">Performance</div>
+      <h2 id="perf" class="h2">Cumulative results across 10+ years</h2>
+      <div class="stats">
+        <div class="stat"><div class="sv">10M+</div><div class="sl">organic reach</div></div>
+        <div class="stat"><div class="sv">€100K+</div><div class="sl">earned media</div></div>
+        <div class="stat"><div class="sv">50+</div><div class="sl">brands served</div></div>
+        <div class="stat"><div class="sv">3</div><div class="sl">continents shipped</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack -->
+  <section id="stack" class="section" aria-labelledby="stackh">
+    <div class="container">
+      <div class="label">Infrastructure</div>
+      <h2 id="stackh" class="h2">Tools & certifications</h2>
+      <div class="tools">
+        <div class="tool-row">
+          <div class="tool-cat">Marketing Automation</div>
+          <div class="tool-items">
+            <span class="chip2">HubSpot ✓</span><span class="chip2">Salesforce</span><span class="chip2">Mailchimp</span><span class="chip2">ActiveCampaign</span>
+          </div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-cat">Analytics & SEO</div>
+          <div class="tool-items">
+            <span class="chip2">GA ✓</span><span class="chip2">Google Ads ✓</span><span class="chip2">Search Console</span><span class="chip2">SEMrush</span><span class="chip2">Ahrefs</span>
+          </div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-cat">PM & Collab</div>
+          <div class="tool-items">
+            <span class="chip2">ClickUp</span><span class="chip2">Slack</span><span class="chip2">Teams</span><span class="chip2">Asana</span><span class="chip2">Notion</span>
+          </div>
+        </div>
+        <div class="tool-row">
+          <div class="tool-cat">Content & Design</div>
+          <div class="tool-items">
+            <span class="chip2">Figma</span><span class="chip2">Canva Pro</span><span class="chip2">Adobe CC</span><span class="chip2">Premiere</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section" aria-labelledby="cont">
+    <div class="container">
+      <div class="label">Let’s talk</div>
+      <h2 id="cont" class="h2">Available for conversation</h2>
+      <div class="card" style="text-align:center">
+        <p style="color:#6b7280;max-width:60ch;margin:0 auto 14px">
+          I’m ready to help you sharpen PMM, accelerate GTM and make complex value obvious.
+        </p>
+        <div style="display:grid;gap:10px;grid-template-columns:1fr">
+          <a class="cta" href="mailto:ga.zakaria@gmail.com">ga.zakaria@gmail.com</a>
+          <a class="cta" href="tel:+212627056916" style="background:#fff;color:#111;border:1px solid var(--line)">+212 627 056 916</a>
+          <a class="cta" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener" style="background:#fff;color:#111;border:1px solid var(--line)">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Built by <a href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener" style="color:#111;text-decoration:none;border-bottom:1px solid var(--line)">Zakaria Gallouch</a>
+  </footer>
+
+  <script>
+    // Respect reduced motion
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.style.scrollBehavior = 'auto';
+    }
+  </script>
 </body>
 </html>
