@@ -1,104 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Zakaria Gallouch — Ecosystem-led Product Clarity</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Zakaria Gallouch — Ecosystem-Led Product Marketing for B2B Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Meta -->
-  <meta name="description" content="Ecosystem-led product clarity for tech & innovation networks — UX insight, benchmarks, GTM and enablement." />
-  <meta property="og:title" content="Ecosystem-led Product Clarity — Zakaria Gallouch" />
-  <meta property="og:description" content="Strategic communications inside tech ecosystems — turning complex value into adoption." />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Evidence-first product marketing for B2B software & platforms: personas, message house, GTM briefs, enablement & activation."/>
+  <meta property="og:title" content="Ecosystem-Led Product Clarity — Zakaria Gallouch"/>
+  <meta property="og:description" content="I help B2B software & platforms turn complex value into adoption — via personas, message house, GTM, enablement & activation."/>
+  <meta property="og:type" content="website"/>
 
   <style>
     :root{
-      --bg:#ffffff; --ink:#0b1220; --muted:#5b6476; --line:#e6eaf1; --subtle:#f7f9fc;
-      --accent:#2563eb; --accent2:#0ea5e9; --ok:#16a34a; --warn:#f59e0b;
-      --radius:14px; --radius-lg:20px; --shadow:0 10px 26px rgba(15,30,60,.08); --ring:0 0 0 3px rgba(37,99,235,.25);
+      --bg:#ffffff; --ink:#0b1220; --muted:#5b6476; --line:#e8eef6; --subtle:#f7f9fc;
+      --accent:#2563eb; --accent2:#0ea5e9; --ok:#16a34a; --warn:#f59e0b; --danger:#ef4444;
+      --radius:14px; --radius-lg:20px; --shadow:0 12px 28px rgba(12,24,60,.08); --ring:0 0 0 3px rgba(37,99,235,.28);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
-    img{max-width:100%;height:auto;display:block}
     a{color:var(--accent);text-decoration:none}
     a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-radius:10px}
-
+    img{max-width:100%;height:auto;display:block}
     .container{max-width:1120px;margin:0 auto;padding:0 18px}
-    .section{padding:48px 18px;border-top:1px solid var(--line)}
-    @media (min-width:720px){ .section{padding:72px 24px} }
+    .section{padding:56px 18px;border-top:1px solid var(--line)}
+    @media (min-width:760px){.section{padding:84px 24px}}
 
-    /* Top bar */
-    .top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
-    .top-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+    /* Topbar */
+    .top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+    .top-inner{height:60px;display:flex;align-items:center;justify-content:space-between}
     .brand{font-weight:800;letter-spacing:.2px}
     .nav{display:none;gap:14px}
-    .nav a{color:#111827;font-weight:600;opacity:.9}
-    @media (min-width:720px){ .nav{display:flex} }
+    .nav a{font-weight:600;color:#1f2937;opacity:.92}
+    @media (min-width:760px){.nav{display:flex}}
 
     /* Hero */
-    header{position:relative;overflow:hidden;background:
-      radial-gradient(1200px 520px at 50% -10%, #eef4ff 0%, transparent 60%),
+    header{background:
+      radial-gradient(1100px 520px at 50% -10%, #eef4ff 0%, transparent 60%),
       linear-gradient(180deg,#fff,#fff)}
     .hero{display:grid;place-items:center;min-height:68vh}
-    .hero-inner{max-width:900px;text-align:center;padding:42px 0}
+    .hero-inner{max-width:920px;text-align:center;padding:44px 0}
     .chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
     .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef2ff;border:1px solid var(--line);color:#475569;font-size:12px}
     .chip .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
-    h1{font-size:clamp(1.9rem,5.6vw,3.2rem);line-height:1.12;margin:.5rem 0 .7rem;letter-spacing:-.02em;background:linear-gradient(135deg,#111,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .lead{font-size:clamp(1rem,3vw,1.125rem);color:var(--muted);max-width:70ch;margin:0 auto 16px}
+    h1{font-size:clamp(2rem,5.6vw,3.4rem);line-height:1.1;margin:.6rem 0 .8rem;letter-spacing:-.02em;background:linear-gradient(135deg,#0b1220,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:clamp(1rem,3.1vw,1.2rem);color:var(--muted);max-width:72ch;margin:0 auto 18px}
     .cta-row{display:grid;grid-template-columns:1fr;gap:10px;justify-items:center;margin-top:14px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;min-height:44px;font-weight:700}
-    .btn.primary{background:#111;color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;min-height:44px;font-weight:800}
+    .btn.primary{background:#111827;color:#fff}
+    .trust{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+    .trust .badge{font-size:12px;font-weight:700;padding:8px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155}
 
     /* Labels & blocks */
     .label{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:#6b7280;margin-bottom:8px}
-    .h2{font-size:clamp(1.25rem,3vw,1.9rem);font-weight:800;letter-spacing:-.01em;margin:0 0 18px}
+    .h2{font-size:clamp(1.25rem,3.2vw,2rem);font-weight:800;letter-spacing:-.01em;margin:0 0 18px}
     .muted{color:var(--muted)}
     .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
-    .box{background:var(--subtle);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+    .box{background:var(--subtle);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
 
     /* Grids */
     .grid-2{display:grid;grid-template-columns:1fr;gap:14px}
     .grid-3{display:grid;grid-template-columns:1fr;gap:14px}
     .grid-4{display:grid;grid-template-columns:1fr;gap:14px}
-    @media (min-width:720px){
+    @media (min-width:760px){
       .grid-2{grid-template-columns:1fr 1fr;gap:18px}
       .grid-3{grid-template-columns:repeat(3,1fr);gap:18px}
       .grid-4{grid-template-columns:repeat(4,1fr);gap:18px}
     }
 
-    /* Segments (SaaS vibe) */
-    .segments{display:flex;gap:8px;flex-wrap:wrap}
-    .seg{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;font-weight:600;font-size:12px}
-    .seg.active{background:#111;color:#fff;border-color:#111}
+    /* Check list */
+    .checklist{list-style:none;padding-left:0;margin:0}
+    .checklist li{position:relative;padding-left:24px;margin:8px 0;color:#374151}
+    .checklist li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:900}
 
-    /* Feature cards */
-    .feature{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
-    .feature b{display:block;margin-bottom:6px}
-    .feature p{margin:0;color:#525252}
+    /* Mini table */
+    table.mini{width:100%;border-collapse:collapse;font-size:.95rem}
+    table.mini td{padding:8px 6px;border-bottom:1px solid var(--line)}
+    table.mini tr:last-child td{border-bottom:none}
 
-    /* KPIs */
+    /* KPIs & funnel */
     .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
     .kpi{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
     .kpi b{display:block;font-size:clamp(1.05rem,3vw,1.3rem);color:#0b1220}
-    @media (min-width:720px){ .kpis{grid-template-columns:repeat(4,1fr)} }
+    @media (min-width:760px){ .kpis{grid-template-columns:repeat(4,1fr)} }
+    .funnel{display:grid;place-items:center;padding:14px;border:1px dashed var(--line);border-radius:14px}
+    .funnel svg{max-width:480px;width:100%}
+
+    /* SaaS pattern cards */
+    .feature{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+    .feature b{display:block;margin-bottom:6px}
+    .feature p{margin:0;color:#525252}
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--line);border-radius:999px;font-weight:700;font-size:12px;background:#fff;color:#1f2937}
 
     /* Cases */
     .cases{display:grid;grid-template-columns:1fr;gap:16px}
-    @media (min-width:720px){ .cases{grid-template-columns:1fr 1fr} }
+    @media (min-width:760px){ .cases{grid-template-columns:1fr 1fr} }
     .case{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff;transition:.2s}
-    .case:hover{border-color:#111;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+    .case:hover{border-color:#111827;box-shadow:0 2px 12px rgba(0,0,0,.06)}
     .case .tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin-bottom:8px}
     .case .title{font-size:18px;font-weight:800;margin-bottom:8px}
-    .case h4{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#6b7280;margin:10px 0 6px}
-    .case p{font-size:14px;color:#525252;margin:0}
     .metrics{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
     .metric{min-width:44%}
     .metric .v{font-weight:800;font-size:clamp(1.05rem,3.2vw,1.25rem)}
@@ -111,22 +114,29 @@
     details summary{cursor:pointer;color:#111;font-weight:700;margin-top:8px}
     details > div{margin-top:8px;color:#525252}
 
+    /* FAQ */
+    .faq details{border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff}
+    .faq details+details{margin-top:10px}
+    .faq summary{font-weight:800}
+
     /* Footer */
     footer{padding:34px 18px;border-top:1px solid var(--line);text-align:center;color:#6b7280}
+    .foot-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:8px}
   </style>
 </head>
 <body>
-
-  <!-- Top bar -->
+  <!-- Topbar -->
   <div class="top">
     <div class="container top-inner">
       <div class="brand">Zakaria Gallouch</div>
       <nav class="nav" aria-label="Sections">
-        <a href="#approach">Approach</a>
-        <a href="#fit">PMM Fit</a>
+        <a href="#operating">Operating Model</a>
+        <a href="#patterns">SaaS Patterns</a>
+        <a href="#proof">Proof</a>
         <a href="#cases">Case Studies</a>
         <a href="#artifacts">Artifacts</a>
         <a href="#pilot">Freelance Sprint</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -140,106 +150,149 @@
           <span class="chip"><span class="dot" aria-hidden="true"></span> Ecosystem-Led Product Clarity</span>
           <span class="chip"><span class="dot" aria-hidden="true"></span> Zakaria Gallouch — Application & Product Marketing Manager</span>
         </div>
-        <h1>I help tech & innovation ecosystems turn ideas into adoption</h1>
-        <p class="lead">Strategic communications embedded in entrepreneur networks, innovation clusters and digital communities. I bridge <b>UX insight</b>, <b>benchmarks</b> and <b>go-to-market clarity</b> so complex products become understandable, trusted and used.</p>
+        <h1>I help B2B software & platforms turn complex value into adoption</h1>
+        <p class="lead">Embedded in entrepreneur networks, innovation clusters and digital communities. I bridge <b>personas & UX insight</b>, <b>message house</b>, <b>GTM briefs</b> and <b>enablement & activation</b> to drive evaluation, trust and usage.</p>
         <div class="cta-row">
           <a class="btn primary" href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noopener">Schedule Interview</a>
+        </div>
+        <div class="trust" aria-label="Trust indicators">
+          <span class="badge">FR/EN — EMEA</span>
+          <span class="badge">Remote-first</span>
+          <span class="badge">4-week PMM sprint</span>
+          <span class="badge">Message house in 2 weeks</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Approach -->
-  <section id="approach" class="section" aria-labelledby="approach-title">
+  <!-- Operating Model -->
+  <section id="operating" class="section" aria-labelledby="operating-title">
     <div class="container">
-      <div class="label">Approach</div>
-      <h2 id="approach-title" class="h2">From ecosystems to enablement — clarity that scales</h2>
+      <div class="label">Operating model</div>
+      <h2 id="operating-title" class="h2">Evidence-first product marketing — from discovery to enablement</h2>
 
-      <div class="segments" role="tablist" aria-label="Process">
-        <span class="seg active" role="tab" aria-selected="true">Personas</span>
-        <span class="seg" role="tab">Positioning</span>
-        <span class="seg" role="tab">GTM</span>
-        <span class="seg" role="tab">Enablement</span>
-      </div>
-
-      <div class="grid-3" style="margin-top:14px">
-        <div class="feature">
-          <b>Embedded in Tech Networks</b>
-          <p>Active across founders’ communities & innovation clusters. I align product, design, comms and community signals.</p>
-        </div>
-        <div class="feature">
-          <b>Product-Adjacent, Not Overclaiming</b>
-          <p>UX inputs & benchmark → message architecture for technical audiences → reusable content systems.</p>
-        </div>
-        <div class="feature">
-          <b>Outcomes You Can Expect</b>
-          <p>Clearer positioning, faster approvals, enablement that scales across markets, measurable usage signals.</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:16px">
-        <div class="label" style="margin-bottom:6px">Integrations I’m fluent with</div>
-        <div class="segments" aria-label="Tools">
-          <span class="seg">HubSpot</span><span class="seg">GA4</span><span class="seg">Search Console</span>
-          <span class="seg">SEMrush</span><span class="seg">Ahrefs</span><span class="seg">ClickUp</span><span class="seg">Notion</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Honest PMM Fit -->
-  <section id="fit" class="section" aria-labelledby="fit-title">
-    <div class="container card">
-      <div class="label">Fit for PMM (honest)</div>
       <div class="grid-2">
-        <div>
-          <h3 style="margin:0 0 8px">Where I fit in a PMM team</h3>
-          <ul class="muted" style="margin:0 0 10px 18px">
-            <li>Positioning & message house for technical buyers</li>
-            <li>Launch/campaign briefs with owners, assets & KPIs</li>
-            <li>Sales one-pagers, talk tracks & objection handling</li>
-            <li>Research inputs: UX cues, benchmark syntheses, SEO/intent signals</li>
+        <div class="card">
+          <h3 style="margin:0 0 10px">What I do</h3>
+          <ul class="checklist">
+            <li><b>Discovery</b> — 6–8 stakeholder interviews + competitive & intent signals</li>
+            <li><b>Positioning</b> — message house + pains/objections/proof-asks per persona</li>
+            <li><b>GTM 90-day brief</b> — channels, assets, owners, KPI tree</li>
+            <li><b>Enablement & activation</b> — sales one-pager, talk track, onboarding sketch</li>
           </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0 0 10px">Deliverables & target timeline</h3>
+          <table class="mini" aria-label="Timeline">
+            <tr><td>Day 1–10</td><td>Discovery pack (notes, insights, segments)</td></tr>
+            <tr><td>Day 10–14</td><td>Message House v1 (value → pillars → proof → objections)</td></tr>
+            <tr><td>Day 15–20</td><td>GTM Brief (90-day) — channels, assets, owners, KPIs</td></tr>
+            <tr><td>Day 21–28</td><td>Enablement v1 — one-pager, talk track, activation sketch</td></tr>
+          </table>
+          <p class="muted" style="margin-top:8px">Target pace — adaptable to access & constraints.</p>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top:16px">
+        <div class="box">
+          <b>Governance</b>
+          <p class="muted" style="margin:6px 0 0">Weekly sync Product/Sales; approval path defined upfront.</p>
         </div>
         <div class="box">
-          <b>What I’m not claiming (and how I address it)</b>
-          <ul style="margin:8px 0 0 18px" class="muted">
-            <li>No formal SaaS feature launches yet → public <em>Spec GTM</em> + pilot in month 1</li>
-            <li>No formal win/loss yet → <em>lite win/loss kit</em> + first 6–8 interviews</li>
-            <li>No owned lifecycle yet → <em>activation sketch</em> (emails + in-app copy)</li>
-          </ul>
-          <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="seg" href="#" aria-disabled="true">Spec GTM (coming soon)</a>
-            <a class="seg" href="#" aria-disabled="true">Win/Loss Lite (coming soon)</a>
-            <a class="seg" href="#" aria-disabled="true">Lifecycle Sketch (coming soon)</a>
-          </div>
+          <b>Measurement</b>
+          <p class="muted" style="margin:6px 0 0">Demo requests, SQL rate, time-to-first-value, sales content adoption.</p>
+        </div>
+        <div class="box">
+          <b>Evidence</b>
+          <p class="muted" style="margin:6px 0 0">
+            <a href="https://sahelpub21-debug.github.io/HPS/#messaging" target="_blank" rel="noopener">HPS — Message House</a> ·
+            <a href="https://sahelpub21-debug.github.io/HPS/#strategy" target="_blank" rel="noopener">HPS — GTM</a> ·
+            <a href="/fan4all" target="_blank" rel="noopener">Fan4All — full case</a>
+          </p>
+        </div>
+      </div>
+
+      <details class="card" style="margin-top:16px">
+        <summary><b>What I’m not claiming & how I address it</b></summary>
+        <ul class="muted" style="margin:10px 0 0 18px">
+          <li>No former PMM title → I publish public artifacts & start with a pilot sprint.</li>
+          <li>No pricing/packaging ownership → I bring customer voice & competitive inputs to inform decisions.</li>
+          <li>No full lifecycle ownership → I deliver an activation sketch aligned with analytics/CS.</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- SaaS Pattern Fluency -->
+  <section id="patterns" class="section" aria-labelledby="patterns-title">
+    <div class="container">
+      <div class="label">SaaS pattern fluency</div>
+      <h2 id="patterns-title" class="h2">Patterns → Application → Impact</h2>
+      <div class="grid-3">
+        <div class="feature">
+          <span class="pill">Trust bar early</span>
+          <b>Applied</b>
+          <p>Guarantees, language/region, sprint & delivery SLAs visible above the fold.</p>
+          <b style="display:block;margin-top:10px">Impact</b>
+          <p>Reduces friction in evaluation; faster path to “book a call”.</p>
+        </div>
+        <div class="feature">
+          <span class="pill">Use-case collections</span>
+          <b>Applied</b>
+          <p>Cases bucketed (Data Intelligence · Market Intelligence · Platforms/Marketplaces).</p>
+          <b style="display:block;margin-top:10px">Impact</b>
+          <p>Persona-driven navigation; higher relevance per click.</p>
+        </div>
+        <div class="feature">
+          <span class="pill">Product-style case pages</span>
+          <b>Applied</b>
+          <p>Each case reads like a product page: context → role → actions → outcomes → CTA.</p>
+          <b style="display:block;margin-top:10px">Impact</b>
+          <p>Clear value proof; consistent hand-off to sales.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Proof metrics -->
-  <section class="section" aria-labelledby="proof-title">
+  <!-- Proof & Pipeline -->
+  <section id="proof" class="section" aria-labelledby="proof-title">
     <div class="container">
       <div class="label">Proof, not promises</div>
-      <h2 id="proof-title" class="h2">Ecosystem campaigns with measurable outcomes</h2>
-      <div class="kpis">
-        <div class="kpi"><b>10M+</b><span class="muted">organic & earned reach</span></div>
-        <div class="kpi"><b>30+</b><span class="muted">message frameworks shipped</span></div>
-        <div class="kpi"><b>−30%</b><span class="muted">approval cycle time (positioning)</span></div>
-        <div class="kpi"><b>+19%</b><span class="muted">conversion after trust cues</span></div>
+      <h2 id="proof-title" class="h2">Ecosystem campaigns with measurable pipeline signals</h2>
+
+      <div class="grid-2">
+        <div>
+          <div class="kpis" role="list" aria-label="Key metrics">
+            <div class="kpi"><b>10M+</b><span class="muted">organic & earned reach</span></div>
+            <div class="kpi"><b>30+</b><span class="muted">message frameworks shipped</span></div>
+            <div class="kpi"><b>−30%</b><span class="muted">approval cycle time (positioning)</span></div>
+            <div class="kpi"><b>+19%</b><span class="muted">conversion after trust cues</span></div>
+          </div>
+        </div>
+        <div class="funnel" aria-label="Funnel overview">
+          <!-- Simple funnel SVG -->
+          <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs>
+            <rect x="10" y="10" width="500" height="40" rx="8" fill="url(#g)"/><text x="260" y="36" text-anchor="middle" fill="#fff" font-weight="700">Traffic & Attention</text>
+            <rect x="40" y="70" width="440" height="36" rx="8" fill="#e5f0ff"/><text x="260" y="93" text-anchor="middle" fill="#1f2a44" font-weight="700">Engagement → Demo requests</text>
+            <rect x="90" y="120" width="340" height="34" rx="8" fill="#f1f5ff"/><text x="260" y="142" text-anchor="middle" fill="#1f2a44" font-weight="700">MQL → SQL</text>
+            <rect x="160" y="166" width="200" height="24" rx="8" fill="#eaf2ff"/><text x="260" y="182" text-anchor="middle" fill="#1f2a44" font-weight="700">Opportunities</text>
+          </svg>
+          <div class="muted" style="font-size:.9rem;margin-top:6px;text-align:center">KPIs tracked: demo requests, SQL rate, time-to-first-value, enablement usage.</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Case Studies (4) -->
+  <!-- Case Studies -->
   <section id="cases" class="section" aria-labelledby="cases-title">
     <div class="container">
       <div class="label">Case studies</div>
       <h2 id="cases-title" class="h2">How the narrative becomes adoption</h2>
 
       <div class="cases">
-        <!-- Fan4All (anchor PMM) -->
+        <!-- Fan4All anchor -->
         <article class="case">
           <div class="tag">Platforms & Communities</div>
           <div class="title">Fan4All — product-adjacent GTM & adoption</div>
@@ -247,15 +300,16 @@
           <p>Tech marketplace needed clearer value, adoption levers, and partner-ready enablement.</p>
           <h4>My contribution</h4>
           <ul class="muted" style="margin:0 0 0 18px">
-            <li><b>UX & Benchmark:</b> size/returns clarity, trust signals, social proof gaps</li>
-            <li><b>Positioning:</b> creator-led narrative + match-day use; PDP trust cues</li>
-            <li><b>GTM:</b> short-form hooks → PDP, seasonal drops, partner packs for clubs</li>
-            <li><b>Enablement:</b> creator briefs, talk tracks, UTM structure</li>
+            <li><b>UX & benchmark:</b> trust cues, social proof & policy clarity</li>
+            <li><b>Positioning:</b> creator-led narrative + match-day use case</li>
+            <li><b>GTM:</b> short-form hooks → PDP; seasonal drops; partner packs</li>
+            <li><b>Enablement:</b> briefs, talk tracks, UTM structure</li>
           </ul>
           <div class="metrics">
             <div class="metric"><div class="v">+28%</div><div class="l">CTR video → PDP</div></div>
-            <div class="metric"><div class="v">+19%</div><div class="l">CVR after trust cues</div></div>
+            <div class="metric"><div class="v">+19%</div><div class="l">Conversion after trust cues</div></div>
           </div>
+          <p style="margin-top:10px"><a href="/fan4all" target="_blank" rel="noopener">View full case →</a></p>
         </article>
 
         <!-- ATDA -->
@@ -303,7 +357,7 @@
     </div>
   </section>
 
-  <!-- Artifacts (wired to HPS) -->
+  <!-- Artifacts (HPS wired + neutral wording) -->
   <section id="artifacts" class="section" aria-labelledby="artifacts-title">
     <div class="container">
       <div class="label">Artifacts</div>
@@ -314,31 +368,31 @@
           <p class="muted">Decision ecosystem: roles, pains, proof asks, objections.</p>
           <details><summary>Preview</summary><div>Stakeholder mapping for a regulated payments platform (CIO/CTO, CDO, Ops, Compliance) with content per role.</div></details>
           <p style="margin-top:8px">
-            <a href="https://sahelpub21-debug.github.io/HPS/#stakeholders" target="_blank" rel="noopener">View HPS sample →</a>
+            <a href="https://sahelpub21-debug.github.io/HPS/#stakeholders" target="_blank" rel="noopener">View HPS excerpt →</a>
           </p>
         </div>
         <div class="artifact">
           <b>Message House</b>
           <p class="muted">Value proposition → pillars → proof → objections.</p>
-          <details><summary>Preview</summary><div>“Innovation / Reliability / Partnership” pillars mapped to proof points and supporting content.</div></details>
+          <details><summary>Preview</summary><div>“Innovation / Reliability / Partnership” pillars mapped to proof points.</div></details>
           <p style="margin-top:8px">
-            <a href="https://sahelpub21-debug.github.io/HPS/#messaging" target="_blank" rel="noopener">View HPS sample →</a>
+            <a href="https://sahelpub21-debug.github.io/HPS/#messaging" target="_blank" rel="noopener">View HPS excerpt →</a>
           </p>
         </div>
         <div class="artifact">
           <b>Launch / Campaign Brief</b>
-          <p class="muted">Narrative, assets, channels, owners, KPIs (90-day plan).</p>
+          <p class="muted">Narrative, channels, assets, owners, KPIs (90-day plan).</p>
           <details><summary>Preview</summary><div>Foundation → Quick Wins → Scale & Optimize, with success metrics & governance.</div></details>
           <p style="margin-top:8px">
-            <a href="https://sahelpub21-debug.github.io/HPS/#strategy" target="_blank" rel="noopener">View HPS sample →</a>
+            <a href="https://sahelpub21-debug.github.io/HPS/#strategy" target="_blank" rel="noopener">View HPS excerpt →</a>
           </p>
         </div>
         <div class="artifact">
-          <b>Enablement One-Pagers</b>
-          <p class="muted">Talk tracks, trust cues, competitive deltas & objections.</p>
+          <b>Enablement One-Pager</b>
+          <p class="muted">Talk tracks, trust cues, competitor deltas & objections.</p>
           <details><summary>Preview</summary><div>ABM framework by segment (Tier-1 banks, neobanks, processors) + attribution model.</div></details>
           <p style="margin-top:8px">
-            <a href="https://sahelpub21-debug.github.io/HPS/#abm" target="_blank" rel="noopener">View HPS sample →</a>
+            <a href="https://sahelpub21-debug.github.io/HPS/#abm" target="_blank" rel="noopener">View HPS excerpt →</a>
           </p>
         </div>
       </div>
@@ -363,6 +417,32 @@
     </div>
   </section>
 
+  <!-- FAQ Objections -->
+  <section id="faq" class="section" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="label">FAQ</div>
+      <h2 id="faq-title" class="h2">Honest answers to common objections</h2>
+      <div class="faq grid-2">
+        <details open>
+          <summary>Have you marketed a SaaS product before?</summary>
+          <p class="muted" style="margin-top:8px">Not under the formal PMM title. I’ve operated product-adjacent: positioning, GTM briefs, in-app messaging and enablement. Public artifacts (HPS excerpts, Fan4All case) show method & impact.</p>
+        </details>
+        <details>
+          <summary>What about pricing/packaging?</summary>
+          <p class="muted" style="margin-top:8px">I contribute with customer voice & competitive inputs; work with Product to inform the decision and the narrative around it.</p>
+        </details>
+        <details>
+          <summary>Lifecycle & retention?</summary>
+          <p class="muted" style="margin-top:8px">I provide an activation sketch (emails + in-app nudges) aligned to analytics and CS. We iterate post-launch.</p>
+        </details>
+        <details>
+          <summary>How do we measure success?</summary>
+          <p class="muted" style="margin-top:8px">Demo requests, SQL rate, time-to-first-value, enablement usage by sales, and content-to-pipeline attribution.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="section" aria-labelledby="contact-title">
     <div class="container">
@@ -373,14 +453,33 @@
         <div class="cta-row">
           <a class="btn primary" href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" rel="noopener">Schedule Interview</a>
         </div>
+        <div class="foot-links">
+          <a href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://your-website.example" target="_blank" rel="noopener">Website</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>© <span id="y"></span> Zakaria Gallouch · Ecosystem-driven product clarity</footer>
+  <footer>© <span id="y"></span> Zakaria Gallouch · Ecosystem-driven product clarity for B2B software</footer>
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Smooth active nav highlight
+    const sections = [...document.querySelectorAll('section')];
+    const links = [...document.querySelectorAll('.nav a')];
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        const top = s.offsetTop - 120;
+        if (scrollY >= top) current = s.id;
+      });
+      links.forEach(a => {
+        a.style.opacity = a.getAttribute('href') === `#${current}` ? '1' : '.8';
+      });
+    });
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.style.scrollBehavior = 'auto';
     }
