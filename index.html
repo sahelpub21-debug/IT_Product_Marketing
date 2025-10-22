@@ -608,13 +608,7 @@
             }
             
             h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: var(--spacing-md);
+                font-size: 2rem;
             }
             
             .profile-photo {
@@ -643,6 +637,14 @@
             
             .grid-3 {
                 grid-template-columns: 1fr;
+            }
+            
+            .stat-value {
+                font-size: 2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8125rem;
             }
         }
         
@@ -714,26 +716,25 @@
     <section class="hero">
         <div class="gradient-bg"></div>
         <div class="container hero-content animate-in">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <div style="display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-md);">
+                <!-- Replace this with your actual photo: <img src="your-photo.jpg" alt="Zakaria Gallouch" style="width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--border); object-fit: cover;"> -->
+                <div class="profile-photo" title="Remplacer par votre photo" style="width: 80px; height: 80px; font-size: 2rem;">ZG</div>
                 <div class="hero-badge" style="display: inline-flex;">
                     <span class="status-dot"></span>
                     Disponible pour nouveaux projets
                 </div>
-                
-                <!-- Replace this with your actual photo: <img src="your-photo.jpg" alt="Zakaria Gallouch" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid var(--border); object-fit: cover; margin: 0 auto var(--spacing-md); display: block;"> -->
-                <div class="profile-photo" title="Remplacer par votre photo" style="margin: 0 auto var(--spacing-md); width: 100px; height: 100px; font-size: 2.5rem;">ZG</div>
-                
-                <h1 style="margin-bottom: var(--spacing-md);">
-                    Je transforme les produits complexes<br>
-                    en <span class="gradient-text">messages qui convertissent</span>
-                </h1>
             </div>
             
-            <p class="lead" style="text-align: center; margin: 0 auto var(--spacing-lg); max-width: 700px;">
+            <h1 style="margin-bottom: var(--spacing-md);">
+                Je transforme les produits complexes<br>
+                en <span class="gradient-text">messages qui convertissent</span>
+            </h1>
+            
+            <p class="lead" style="margin: 0 0 var(--spacing-lg);">
                 Marketing strategist spécialisé tech & SaaS. 10 ans d'expérience en positioning, GTM et activation utilisateur pour marketplaces et logiciels B2B.
             </p>
             
-            <div class="cta-group" style="justify-content: center;">
+            <div class="cta-group">
                 <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" class="btn btn-primary">
                     Discutons de votre projet
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -745,16 +746,20 @@
             
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-value">10+</div>
-                    <div class="stat-label">Années d'expérience</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-value">1.3M</div>
-                    <div class="stat-label">Reach organique (Glovo)</div>
+                    <div class="stat-value">300K€</div>
+                    <div class="stat-label">PR Value (SportTech Marketplace)</div>
                 </div>
                 <div class="stat">
                     <div class="stat-value">+28%</div>
-                    <div class="stat-label">Conversion (Fan4All)</div>
+                    <div class="stat-label">Conversion (SportTech Marketplace)</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">+20</div>
+                    <div class="stat-label">Industries Served</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">+50</div>
+                    <div class="stat-label">Brands & Institutions Served</div>
                 </div>
             </div>
         </div>
@@ -917,8 +922,8 @@
                         </div>
                     </div>
                     <div class="metric">
-                        <div class="metric-value">40+</div>
-                        <div class="metric-label">Créateurs équipés & actifs</div>
+                        <div class="metric-value">300K€</div>
+                        <div class="metric-label">PR Value généré</div>
                         <div class="metric-bar">
                             <div class="metric-fill" style="width: 95%;"></div>
                         </div>
@@ -935,65 +940,68 @@
                 </div>
             </div>
             
-            <!-- Case Study 2: Glovo -->
+            <!-- Case Study 2: HPS -->
             <div class="case-study">
                 <div class="case-header">
-                    <div class="company-logo" style="background: #FFC244; color: #000;">G</div>
+                    <div class="company-logo">HPS</div>
                     <div class="case-meta">
-                        <span class="case-tag">Tech Platform · Delivery</span>
-                        <h3>Glovo — Humans of Glovo (Brand Trust Campaign)</h3>
+                        <span class="case-tag">B2B SaaS · Fintech</span>
+                        <h3>HPS — Brand & Market Intelligence (Payment Tech)</h3>
                     </div>
                 </div>
                 
                 <div class="timeline">
                     <div class="timeline-item">
                         <h4>Contexte</h4>
-                        <p>En période de tensions diplomatiques risquant de déclencher des boycotts consommateurs au Maroc, Glovo avait besoin de renforcer ses racines locales et humaniser la marque. Objectif : montrer les pratiques responsables (sécurité routière, livraison équitable, RH) et mettre en lumière l'équipe marocaine derrière les opérations.</p>
+                        <p>Solution de paiement pour banques et retailers (PowerCARD platform). Mission freelance pour le Head of Product Marketing : audit marque/marché et recommandations stratégiques pour structurer l'inbound marketing et l'ABM dans un secteur hautement régulé. Projet récent (2025).</p>
                     </div>
                     
                     <div class="timeline-item">
-                        <h4>Mon Rôle — Strategic Comms & Content Production</h4>
-                        <p><strong>Planification stratégique :</strong> Architecture des messages (trust building, CSR pillars, local team spotlight), définition des piliers de contenu, calendrier éditorial.</p>
-                        <p style="margin-top: 0.5rem;"><strong>Exécution :</strong> Direction éditoriale et scripting de la série vidéo "Humans of Glovo", supervision production (shoots, montage, delivery), gestion du calendrier de publication, monitoring des engagements et réponses communautaires.</p>
+                        <h4>Mon Rôle — Strategic Market Analysis</h4>
+                        <p><strong>Audit complet :</strong> Analyse de la position marché dans le secteur payment tech avec écosystème stakeholders complexe (CIO/CTO, CDO, Compliance, Operations). Mapping concurrentiel approfondi et identification des gaps de différenciation.</p>
+                        <p style="margin-top: 0.5rem;"><strong>Recommandations stratégiques :</strong> Framework messaging multi-persona, stratégie éditoriale 90 jours avec ownership et KPIs, ABM framework par tier d'accounts, content operations et workflows d'approval.</p>
                     </div>
                     
                     <div class="timeline-item">
-                        <h4>Format & Activation</h4>
+                        <h4>Livrables Stratégiques</h4>
                         <ul class="feature-list">
-                            <li>Série vidéo native Facebook (5 épisodes : Who are the Glovers, Dishes, Road Safety, Passions, Teaser)</li>
-                            <li>Formats courts, sous-titrés, mobile-first, ton authentique et humain</li>
-                            <li>Distribution 100% organique avec amplification communautaire</li>
-                            <li>Monitoring sentiment et community management actif</li>
+                            <li>Stakeholder Mapping — 5 personas détaillées avec jobs-to-be-done, influence, besoins contenus</li>
+                            <li>Regulatory Landscape — PCI-DSS, PSD2, EMVCo, GDPR avec matrices de compliance</li>
+                            <li>Competitive Analysis — ACI, FIS/Worldpay, Temenos : forces, gaps, opportunités différenciation</li>
+                            <li>Messaging House — 3 piliers (Innovation, Reliability, Partnership) avec proof points par persona</li>
+                            <li>Editorial Strategy 90j — Thought Leadership, Solution Education, Decision Support avec formats et KPIs</li>
+                            <li>ABM Framework — Target accounts, personas prioritaires, proof points, séquences campagnes</li>
+                            <li>Content Operations — Workflows création, approval process, lead scoring, attribution multi-touch</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="metrics">
                     <div class="metric">
-                        <div class="metric-value">1.3M</div>
-                        <div class="metric-label">Reach organique</div>
+                        <div class="metric-value">5</div>
+                        <div class="metric-label">Personas B2B mappées</div>
                         <div class="metric-bar">
                             <div class="metric-fill" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="metric">
-                        <div class="metric-value">13.5K</div>
-                        <div class="metric-label">Engagements (likes, comments, shares)</div>
+                        <div class="metric-value">90j</div>
+                        <div class="metric-label">Plan stratégique validé</div>
                         <div class="metric-bar">
-                            <div class="metric-fill" style="width: 88%;"></div>
+                            <div class="metric-fill" style="width: 100%;"></div>
                         </div>
                     </div>
                     <div class="metric">
-                        <div class="metric-value">Positif</div>
-                        <div class="metric-label">Sentiment général</div>
+                        <div class="metric-value">3</div>
+                        <div class="metric-label">Piliers éditoriaux définis</div>
                         <div class="metric-bar">
-                            <div class="metric-fill" style="width: 95%;"></div>
+                            <div class="metric-fill" style="width: 100%;"></div>
                         </div>
                     </div>
                 </div>
                 
                 <div style="margin-top: var(--spacing-lg); text-align: center;">
-                    <a href="https://sahelpub21-debug.github.io/Glovovideocontent/" target="_blank" class="btn btn-secondary">
+                    <a href="https://sahelpub21-debug.github.io/HPS/" target="_blank" class="btn btn-secondary">
                         Voir le projet complet
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1007,19 +1015,19 @@
                 <h3 style="text-align: center; margin-bottom: var(--spacing-lg); color: var(--text-secondary); font-size: 1.25rem; font-weight: 600;">Autres Projets</h3>
                 
                 <div class="grid grid-3" style="gap: var(--spacing-md);">
-                    <!-- HPS -->
+                    <!-- Glovo -->
                     <div class="card" style="padding: var(--spacing-md);">
                         <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
-                            <div class="company-logo" style="width: 40px; height: 40px; font-size: 1rem;">HPS</div>
+                            <div class="company-logo" style="width: 40px; height: 40px; font-size: 1rem; background: #FFC244; color: #000;">G</div>
                             <div>
-                                <span class="case-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">B2B SaaS · Fintech</span>
+                                <span class="case-tag" style="font-size: 0.75rem; padding: 0.25rem 0.5rem;">Tech Platform · Delivery</span>
                             </div>
                         </div>
-                        <h4 style="font-size: 1rem; margin-bottom: var(--spacing-xs);">Brand & Market Intelligence</h4>
+                        <h4 style="font-size: 1rem; margin-bottom: var(--spacing-xs);">Humans of Glovo</h4>
                         <p style="font-size: 0.875rem; color: var(--text-tertiary); margin-bottom: var(--spacing-md);">
-                            Audit marque/marché pour éditeur payment tech. Stakeholder mapping, competitive analysis, messaging house et stratégie éditoriale 90j.
+                            Série vidéo native (1.3M reach organique) pour humaniser la marque en période de crise. Strategic comms, production, community management.
                         </p>
-                        <a href="https://sahelpub21-debug.github.io/HPS/" target="_blank" style="font-size: 0.875rem; color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                        <a href="https://sahelpub21-debug.github.io/Glovovideocontent/" target="_blank" style="font-size: 0.875rem; color: var(--primary); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
                             Voir le projet
                             <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
                                 <path d="M2 8h12M10 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
