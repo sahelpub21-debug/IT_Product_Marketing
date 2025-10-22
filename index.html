@@ -20,15 +20,15 @@
     :root{
       --bg:#ffffff; --ink:#0b1220; --muted:#5b6476; --line:#e6eaf1; --subtle:#f7f9fc;
       --accent:#2563eb; --accent2:#0ea5e9; --ok:#16a34a; --warn:#f59e0b;
-      --radius:16px; --radius-lg:20px; --shadow:0 10px 28px rgba(15,30,60,.08); --ring:0 0 0 3px rgba(37,99,235,.25);
+      --radius:14px; --radius-lg:20px; --shadow:0 10px 26px rgba(15,30,60,.08); --ring:0 0 0 3px rgba(37,99,235,.25);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
-
     img{max-width:100%;height:auto;display:block}
     a{color:var(--accent);text-decoration:none}
     a:focus-visible,button:focus-visible{outline:none;box-shadow:var(--ring);border-radius:10px}
+
     .container{max-width:1120px;margin:0 auto;padding:0 18px}
     .section{padding:48px 18px;border-top:1px solid var(--line)}
     @media (min-width:720px){ .section{padding:72px 24px} }
@@ -46,10 +46,11 @@
       radial-gradient(1200px 520px at 50% -10%, #eef4ff 0%, transparent 60%),
       linear-gradient(180deg,#fff,#fff)}
     .hero{display:grid;place-items:center;min-height:68vh}
-    .hero-inner{max-width:880px;text-align:center;padding:42px 0}
-    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef2ff;border:1px solid var(--line);color:#475569;font-size:12px;margin-bottom:12px}
+    .hero-inner{max-width:900px;text-align:center;padding:42px 0}
+    .chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#eef2ff;border:1px solid var(--line);color:#475569;font-size:12px}
     .chip .dot{width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
-    h1{font-size:clamp(1.8rem,5.6vw,3.2rem);line-height:1.12;margin:.3rem 0 .7rem;letter-spacing:-.02em;background:linear-gradient(135deg,#111,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
+    h1{font-size:clamp(1.8rem,5.6vw,3.2rem);line-height:1.12;margin:.5rem 0 .7rem;letter-spacing:-.02em;background:linear-gradient(135deg,#111,#6b7280);-webkit-background-clip:text;background-clip:text;color:transparent}
     .lead{font-size:clamp(1rem,3vw,1.125rem);color:var(--muted);max-width:70ch;margin:0 auto 16px}
     .cta-row{display:grid;grid-template-columns:1fr;gap:10px;justify-items:center;margin-top:14px}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 18px;border-radius:12px;min-height:44px;font-weight:700}
@@ -74,17 +75,21 @@
       .grid-4{grid-template-columns:repeat(4,1fr);gap:18px}
     }
 
-    /* Value triptych */
-    .value{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .value > div{background:#fff;padding:20px}
-    .value .highlight{background:#111;color:#fff}
-    .value h3{font-size:15px;margin:0 0 10px}
-    .value ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
-    .value li{font-size:14px;color:#444}
-    .value .highlight li{color:#f5f5f5}
-    @media (min-width:720px){ .value{grid-template-columns:repeat(3,1fr)} }
+    /* SaaS-style segmented control */
+    .segments{display:flex;gap:8px;flex-wrap:wrap}
+    .seg{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#334155;font-weight:600;font-size:12px}
+    .seg.active{background:#111;color:#fff;border-color:#111}
 
-    /* Proof metrics */
+    /* Feature cards */
+    .feature{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+    .feature b{display:block;margin-bottom:6px}
+    .feature p{margin:0;color:#525252}
+
+    /* Integrations chips */
+    .chips2{display:flex;gap:8px;flex-wrap:wrap}
+    .chip2{font-size:12px;color:#475569;background:#f5f7fb;padding:6px 10px;border-radius:8px;border:1px solid var(--line)}
+
+    /* KPIs */
     .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
     .kpi{background:#f8fafc;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
     .kpi b{display:block;font-size:clamp(1.05rem,3vw,1.3rem);color:#0b1220}
@@ -108,10 +113,8 @@
     .artifact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
     .artifact b{display:block;margin-bottom:6px}
     .artifact p{color:#525252;margin:0}
-    .artifact a{white-space:nowrap}
-
-    /* Why company box */
-    .why{border-left:3px solid var(--accent);padding:14px;border-radius:10px;background:#f0f6ff}
+    details summary{cursor:pointer;color:#111;font-weight:700;margin-top:8px}
+    details > div{margin-top:8px;color:#525252}
 
     /* Footer */
     footer{padding:34px 18px;border-top:1px solid var(--line);text-align:center;color:#6b7280}
@@ -137,7 +140,10 @@
   <header>
     <div class="hero">
       <div class="container hero-inner">
-        <div class="chip"><span class="dot" aria-hidden="true"></span> Ecosystem-led Product Clarity</div>
+        <div class="chips">
+          <span class="chip"><span class="dot" aria-hidden="true"></span> Ecosystem-Led Product Clarity</span>
+          <span class="chip"><span class="dot" aria-hidden="true"></span> Zakaria Gallouch — Application & Product Marketing Manager</span>
+        </div>
         <h1>I help tech & innovation ecosystems turn ideas into adoption</h1>
         <p class="lead">
           Strategic communications embedded in entrepreneur networks, innovation clusters and digital communities.
@@ -145,61 +151,56 @@
         </p>
         <p class="lead">Casablanca hub · EMEA scope · English & French</p>
         <div class="cta-row">
-          <a class="btn primary" href="mailto:ga.zakaria@gmail.com">Get in touch →</a>
+          <!-- Get in touch -> LinkedIn -->
+          <a class="btn primary" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">Get in touch →</a>
           <a class="btn ghost" href="#cases">See proof in action</a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Approach -->
+  <!-- Approach (SaaS-style) -->
   <section id="approach" class="section" aria-labelledby="approach-title">
     <div class="container">
       <div class="label">Approach</div>
       <h2 id="approach-title" class="h2">From ecosystems to enablement — clarity that scales</h2>
-      <div class="value">
-        <div>
-          <h3>Embedded in Tech Networks</h3>
-          <ul>
-            <li>Active within entrepreneur communities & innovation clusters</li>
-            <li>Fluent with founder pain points and stakeholder dynamics</li>
-            <li>Bridge teams: product, design, comms and community</li>
-          </ul>
+
+      <!-- Segmented control (SaaS vibe) -->
+      <div class="segments" role="tablist" aria-label="Process">
+        <span class="seg active" role="tab" aria-selected="true">Personas</span>
+        <span class="seg" role="tab">Positioning</span>
+        <span class="seg" role="tab">GTM</span>
+        <span class="seg" role="tab">Enablement</span>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="grid-3" style="margin-top:14px">
+        <div class="feature">
+          <b>Embedded in Tech Networks</b>
+          <p>Active across founders’ communities & innovation clusters. I align product, design, comms and community signals.</p>
         </div>
-        <div class="highlight">
-          <h3>Product-Adjacent, Not Overclaiming</h3>
-          <ul>
-            <li>UX inputs: research signals, feedback, benchmarks</li>
-            <li>Message architecture for technical audiences</li>
-            <li>Content systems that support adoption & trust</li>
-          </ul>
+        <div class="feature">
+          <b>Product-Adjacent, Not Overclaiming</b>
+          <p>UX inputs (research cues & benchmarks) → message architecture for technical audiences → reusable content systems.</p>
         </div>
-        <div>
-          <h3>Outcomes You Can Expect</h3>
-          <ul>
-            <li>Clearer positioning & shorter approval cycles</li>
-            <li>Reusable enablement across markets/teams</li>
-            <li>Measurable engagement, sign-ups and usage signals</li>
-          </ul>
+        <div class="feature">
+          <b>Outcomes You Can Expect</b>
+          <p>Clearer positioning, faster approvals, enablement that scales across markets, measurable engagement & usage signals.</p>
         </div>
       </div>
 
-      <div class="grid-2" style="margin-top:16px">
-        <div class="box">
-          <b>Why this fits an IT Product Marketing mission</b>
-          <ul style="margin:8px 0 0 18px" class="muted">
-            <li>Translate technical value into user-ready language</li>
-            <li>Coordinate go-to-market with cross-functional teams</li>
-            <li>Build content & enablement that drives adoption</li>
-          </ul>
-        </div>
-        <div class="why">
-          <b>Why [Company]</b> — tailor for each application:
-          <ul style="margin:8px 0 0 18px" class="muted">
-            <li>Buyer mirror: investors / analysts / legal decision-makers</li>
-            <li>Motion: activation → expansion across EMEA</li>
-            <li>Where I plug in now: message house, launch brief, enablement loop</li>
-          </ul>
+      <!-- “Integrations” chips -->
+      <div class="card" style="margin-top:16px">
+        <div class="label" style="margin-bottom:6px">Integrations I’m fluent with</div>
+        <div class="chips2">
+          <span class="chip2">HubSpot</span>
+          <span class="chip2">Google Analytics</span>
+          <span class="chip2">Google Ads</span>
+          <span class="chip2">Search Console</span>
+          <span class="chip2">SEMrush</span>
+          <span class="chip2">Ahrefs</span>
+          <span class="chip2">ClickUp</span>
+          <span class="chip2">Notion</span>
         </div>
       </div>
     </div>
@@ -219,7 +220,7 @@
     </div>
   </section>
 
-  <!-- Case Studies -->
+  <!-- Case Studies (4 only) -->
   <section id="cases" class="section" aria-labelledby="cases-title">
     <div class="container">
       <div class="label">Case studies</div>
@@ -268,20 +269,6 @@
           </div>
         </article>
 
-        <!-- Glovo -->
-        <article class="case">
-          <div class="tag">Trust & Brand Intelligence</div>
-          <div class="title">Glovo — sentiment-aware trust layers</div>
-          <h4>Context</h4>
-          <p>Market sensitivity requiring careful narrative aligned with user concerns.</p>
-          <h4>My contribution</h4>
-          <p>Monitoring + human-centric content to improve sentiment & consistency.</p>
-          <div class="metrics">
-            <div class="metric"><div class="v">1.3M</div><div class="l">video reach</div></div>
-            <div class="metric"><div class="v">13.5K</div><div class="l">engagements</div></div>
-          </div>
-        </article>
-
         <!-- ABL -->
         <article class="case">
           <div class="tag">Multi-Vertical Positioning</div>
@@ -307,19 +294,39 @@
       <div class="grid-4">
         <div class="artifact">
           <b>Message House</b>
-          <p class="muted">Value pillars → proof → objection handling. <a href="#">View sample →</a></p>
+          <p class="muted">Value pillars → proof → objections.</p>
+          <details>
+            <summary>Preview</summary>
+            <div>Core value → 3 pillars → proof bullets → objection handling. (Replace with real excerpt.)</div>
+          </details>
+          <p style="margin-top:8px"><a href="/assets/message-house-sample.pdf" download>Download sample (PDF)</a> <!-- TODO: replace link --></p>
         </div>
         <div class="artifact">
           <b>Buyer & Stakeholder Maps</b>
-          <p class="muted">Roles, pains, desired outcomes, triggers. <a href="#">View sample →</a></p>
+          <p class="muted">Roles, pains, outcomes, triggers.</p>
+          <details>
+            <summary>Preview</summary>
+            <div>Persona grid: Role • Pain • Desired outcome • Proof asks • Objections. (Replace with real excerpt.)</div>
+          </details>
+          <p style="margin-top:8px"><a href="/assets/buyer-map-sample.pdf" download>Download sample (PDF)</a></p>
         </div>
         <div class="artifact">
           <b>Launch / Campaign Brief</b>
-          <p class="muted">Narrative, assets, channels, owners, KPIs. <a href="#">View sample →</a></p>
+          <p class="muted">Narrative, assets, channels, owners, KPIs.</p>
+          <details>
+            <summary>Preview</summary>
+            <div>Problem → Narrative → Channels → Asset list → Owners → KPI tree. (Replace with real excerpt.)</div>
+          </details>
+          <p style="margin-top:8px"><a href="/assets/launch-brief-sample.pdf" download>Download sample (PDF)</a></p>
         </div>
         <div class="artifact">
           <b>Enablement One-Pagers</b>
-          <p class="muted">Talk tracks, trust cues, competitive snapshots. <a href="#">View sample →</a></p>
+          <p class="muted">Talk tracks, trust cues, competitive snapshots.</p>
+          <details>
+            <summary>Preview</summary>
+            <div>Pitch spine • Proof points • Competitive deltas • Common objections. (Replace with real excerpt.)</div>
+          </details>
+          <p style="margin-top:8px"><a href="/assets/onepager-sample.pdf" download>Download sample (PDF)</a></p>
         </div>
       </div>
     </div>
@@ -331,12 +338,13 @@
       <div class="label">Let’s talk</div>
       <h2 id="contact-title" class="h2">Ready to bring clarity to complex tech</h2>
       <div class="card" style="text-align:center">
-        <p class="muted" style="max-width:60ch;margin:0 auto 14px">
+        <p class="muted" style="max-width:60ch;margin:0 auto 16px">
           I partner with product, design and comms to translate value, align teams and drive adoption — without overclaiming what I haven’t done.
         </p>
-        <div class="grid-2" style="justify-items:center">
-          <a class="btn primary" href="mailto:ga.zakaria@gmail.com">ga.zakaria@gmail.com</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">LinkedIn Profile</a>
+        <div class="grid-3" style="justify-items:center">
+          <a class="btn primary" href="https://calendly.com/zakariagallouch/intro" target="_blank" rel="noopener">Schedule interview</a> <!-- TODO: replace Calendly slug -->
+          <a class="btn ghost" href="https://www.linkedin.com/in/zakariagallouch" target="_blank" rel="noopener">Leave message on LinkedIn</a>
+          <a class="btn ghost" href="https://your-website.tld" target="_blank" rel="noopener">Visit my website</a> <!-- TODO: replace URL -->
         </div>
       </div>
     </div>
