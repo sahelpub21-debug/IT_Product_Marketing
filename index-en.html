@@ -30,6 +30,8 @@
 
     .hero{padding:var(--xxl) 0;position:relative}
     .hero-content{position:relative;z-index:2}
+    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .9rem;background:var(--bg-subtle);border:1px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--text-secondary);margin-bottom:.5rem}
+    .status-dot{width:8px;height:8px;background:var(--accent-green);border-radius:50%}
     .hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--lg);margin-top:var(--xl)}
     .stat-value{font-size:2.3rem;font-weight:700;color:var(--text-primary);line-height:1;margin-bottom:.4rem}
     .stat-label{font-size:.9rem;color:var(--text-tertiary);font-weight:500}
@@ -73,18 +75,17 @@
     .social-links a{width:40px;height:40px;background:var(--bg-subtle);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);text-decoration:none;transition:all .2s}
     .social-links a:hover{background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px)}
 
-    /* feature bullets + pictos */
+    /* pictos/bullets */
     .feature-list{list-style:none;margin-top:var(--md)}
     .feature-list li{padding-left:1.5rem;position:relative;margin-bottom:.8rem;color:var(--text-secondary)}
     .feature-list li::before{content:'→';position:absolute;left:0;color:var(--primary);font-weight:700}
     .card-icon{width:48px;height:48px;background:var(--bg-subtle);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;font-size:1.5rem}
     .tick{width:32px;height:32px;background:var(--primary);color:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+
     /* Header: lang switch */
     .lang-switch{display:flex;gap:.5rem;background:#fff;border:1px solid var(--border);border-radius:100px;padding:.25rem}
     .lang-switch a{padding:.5rem 1rem;border:none;border-radius:100px;font-weight:600;font-size:.875rem;text-decoration:none;color:var(--text-secondary)}
     .lang-switch a.active{background:var(--primary);color:#fff}
-    .hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .9rem;background:var(--bg-subtle);border:1px solid var(--border);border-radius:999px;font-size:.9rem;color:var(--text-secondary);margin-bottom:.5rem}
-    .status-dot{width:8px;height:8px;background:var(--accent-green);border-radius:50%}
   </style>
 </head>
 <body>
@@ -114,8 +115,7 @@
       <div class="hero-badge"><span class="status-dot"></span>Open to new projects</div>
       <h1>Marketing Strategist<br><span style="background:linear-gradient(135deg,#0066FF, #8B5CF6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">SaaS, Marketplace &amp; B2B Platforms</span></h1>
       <p class="lead" style="margin:0 0 var(--lg);">
-        10 years’ experience in positioning, multi-channel campaign leadership and B2B activations
-        (marketplace, platform, fintech). EMEA coverage.
+        10 years’ experience in positioning, leading multi-channel campaigns and B2B activations (marketplace, platform, fintech). EMEA coverage.
       </p>
       <div class="cta-group">
         <a href="#contact" class="btn btn-primary">Schedule an interview</a>
@@ -136,7 +136,7 @@
     <div class="container">
       <div class="eyebrow">Approach</div>
       <h2>From technical complexity to market adoption</h2>
-      <p class="lead" style="margin-bottom:var(--xxl)">I work at the intersection of product × marketing × user to turn technical value into perceived value.</p>
+      <p class="lead" style="margin-bottom:var(--xxl)">I operate at the intersection of product × marketing × user to turn technical value into perceived value.</p>
 
       <div class="grid grid-3">
         <div class="card">
@@ -152,7 +152,7 @@
         <div class="card">
           <div class="card-icon">🔄</div>
           <h4>User Journey &amp; UX</h4>
-          <p>Mapping real journeys, identifying friction, improving activation.</p>
+          <p>Map real journeys, identify frictions, improve activation.</p>
           <ul class="feature-list">
             <li>Annotated flows</li>
             <li>Micro-copy & messages</li>
@@ -196,9 +196,15 @@
         <div>
           <h4 style="margin-bottom:.75rem">Execution & Tools</h4>
           <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
-            <span class="skill-tag">HubSpot</span><span class="skill-tag">Landing pages</span><span class="skill-tag">Automation</span>
-            <span class="skill-tag">ClickUp</span><span class="skill-tag">Google Analytics</span><span class="skill-tag">GSC / SEO</span>
-            <span class="skill-tag">Keyword Planner</span><span class="skill-tag">Canva</span><span class="skill-tag">Hootsuite / Publer</span>
+            <span class="skill-tag">HubSpot</span>
+            <span class="skill-tag">Landing pages</span>
+            <span class="skill-tag">Automation</span>
+            <span class="skill-tag">ClickUp</span>
+            <span class="skill-tag">Google Analytics</span>
+            <span class="skill-tag">GSC / SEO</span>
+            <span class="skill-tag">Keyword Planner</span>
+            <span class="skill-tag">Canva</span>
+            <span class="skill-tag">Hootsuite / Publer</span>
           </div>
         </div>
       </div>
@@ -209,7 +215,7 @@
     </div>
   </section>
 
-  <!-- Role fit -->
+  <!-- Role alignment -->
   <section style="background:var(--bg-subtle);">
     <div class="container">
       <div class="eyebrow">Role alignment</div>
@@ -225,7 +231,6 @@
             </div>
           </div>
         </div>
-
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:.8rem">
             <div class="tick">✓</div>
@@ -235,17 +240,15 @@
             </div>
           </div>
         </div>
-
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:.8rem">
             <div class="tick">✓</div>
             <div>
               <h4 style="margin:0 0 .3rem 0;font-size:1rem">Multi-channel campaigns</h4>
-              <p style="margin:0;font-size:.95rem">Email, paid, social, content: creative & CTA A/B tests, UGC/partners, reporting and iterations.</p>
+              <p style="margin:0;font-size:.95rem">Email, paid, social, content: creative & CTA A/B tests, UGC/partners, reporting & iterations.</p>
             </div>
           </div>
         </div>
-
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:.8rem">
             <div class="tick">✓</div>
@@ -255,7 +258,6 @@
             </div>
           </div>
         </div>
-
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:.8rem">
             <div class="tick">✓</div>
@@ -265,7 +267,6 @@
             </div>
           </div>
         </div>
-
         <div class="card">
           <div style="display:flex;align-items:flex-start;gap:.8rem">
             <div class="tick">✓</div>
