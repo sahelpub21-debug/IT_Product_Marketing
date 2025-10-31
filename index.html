@@ -48,7 +48,7 @@
     .card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:var(--lg);transition:all .3s}
     .card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
     .grid{display:grid;gap:var(--lg)}
-    @media(min-width:768px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}}
+    @media(min-width:768px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr}}
 
     .package-card{background:#fff;border:2px solid var(--border);border-radius:var(--radius);padding:var(--lg);transition:all .3s;position:relative;display:flex;flex-direction:column}
     .package-card:hover{border-color:var(--primary);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
@@ -86,6 +86,7 @@
       .grid-3{grid-template-columns:1fr}
       h2{font-size:1.7rem}
       .grid-2{grid-template-columns:1fr}
+      .portfolio-grid{grid-template-columns:1fr!important}
     }
 
     @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
@@ -321,7 +322,7 @@
       <h2 data-lang="fr">Sélection de projets</h2>
       <h2 data-lang="en">Selected projects</h2>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--md);margin-top:var(--lg);">
+      <div class="portfolio-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--md);margin-top:var(--lg);">
         <!-- Glovo -->
         <div class="card">
           <img src="https://raw.githubusercontent.com/sahelpub21-debug/zakariagallouch/main/Glovo_Case%20Study.png" alt="Glovo Case Study" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:var(--md);">
