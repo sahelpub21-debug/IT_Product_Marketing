@@ -50,7 +50,7 @@
     .grid{display:grid;gap:var(--lg)}
     @media(min-width:768px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}}
 
-    .package-card{background:#fff;border:2px solid var(--border);border-radius:var(--radius);padding:var(--lg);transition:all .3s;position:relative}
+    .package-card{background:#fff;border:2px solid var(--border);border-radius:var(--radius);padding:var(--lg);transition:all .3s;position:relative;display:flex;flex-direction:column}
     .package-card:hover{border-color:var(--primary);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
     .package-badge{display:inline-block;padding:.25rem .75rem;background:var(--primary);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:var(--md)}
     .package-price{font-size:2.5rem;font-weight:700;color:var(--text-primary);margin-bottom:.5rem}
@@ -132,16 +132,16 @@
           <span data-lang="en">Strategic communications<br>consultant</span>
         </h1>
         <p class="lead" data-lang="fr">
-          Brand Management — Content Marketing — PR
+          Brand Management — Content Marketing — PR — Marketing digital
         </p>
         <p class="lead" data-lang="en">
-          Brand Management — Content Marketing — PR
+          Brand Management — Content Marketing — PR — Digital Marketing
         </p>
         <p data-lang="fr" style="margin-top:var(--sm)">
-          Consultant en communication (10+ ans, EMEA, trilingue FR/EN/AR). Stratégie de marque & RP, content marketing funnel, campagnes multicanales et SEO.
+          10+ ans d'expérience EMEA, trilingue FR/EN/AR. J'accompagne les entreprises tech, marketplaces et éditeurs SaaS dans la structuration de leur communication stratégique : positionnement de marque, relations presse, content marketing funnel, campagnes multicanales et SEO. De l'audit initial à l'exécution opérationnelle, en formats souples (mission express, package foundation ou retainer mensuel) avec livrables concrets et résultats mesurables.
         </p>
         <p data-lang="en" style="margin-top:var(--sm)">
-          Communications consultant (10+ years, EMEA, trilingual FR/EN/AR). Brand strategy & PR, content marketing funnel, multichannel campaigns and SEO.
+          10+ years of EMEA experience, trilingual FR/EN/AR. I support tech companies, marketplaces and SaaS publishers in structuring their strategic communications: brand positioning, press relations, content marketing funnel, multichannel campaigns and SEO. From initial audit to operational execution, in flexible formats (express mission, foundation package or monthly retainer) with concrete deliverables and measurable results.
         </p>
 
         <div class="cta-group">
@@ -150,7 +150,7 @@
             <span data-lang="en">Schedule a call</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </a>
-          <a href="https://sahelpub21-debug.github.io/zakariagallouch/" target="_blank" class="btn btn-secondary">
+          <a href="https://yti.my.canva.site/zg-portfolio" target="_blank" class="btn btn-secondary">
             <span data-lang="fr">Consulter le portfolio</span>
             <span data-lang="en">View portfolio</span>
           </a>
@@ -207,7 +207,7 @@
             <li data-lang="en">Competitive landscape (3 players)</li>
           </ul>
           
-          <div class="package-price" style="margin-top:var(--lg);">2 000 €</div>
+          <div class="package-price" style="margin-top:auto;padding-top:var(--lg);">2 000 MAD</div>
         </div>
 
         <!-- Foundation Package -->
@@ -232,7 +232,7 @@
             <li data-lang="en">Netlinking and media shortlist</li>
           </ul>
           
-          <div class="package-price" style="margin-top:var(--lg);">7 000 €</div>
+          <div class="package-price" style="margin-top:auto;padding-top:var(--lg);">7 000 MAD</div>
         </div>
 
         <!-- Retainer Package -->
@@ -255,7 +255,7 @@
             <li data-lang="en">Crisis monitoring & response</li>
           </ul>
           
-          <div class="package-price" style="margin-top:var(--lg);">6 500 € <small data-lang="fr">/ mois</small><small data-lang="en">/ month</small></div>
+          <div class="package-price" style="margin-top:auto;padding-top:var(--lg);">6 500 MAD <small data-lang="fr">/ mois</small><small data-lang="en">/ month</small></div>
         </div>
       </div>
 
@@ -290,6 +290,68 @@
         <div class="logo-item">Glovo</div>
         <div class="logo-item">ATDA</div>
         <div class="logo-item">ABL Aviation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section style="background:var(--bg-subtle);">
+    <div class="container">
+      <div class="eyebrow">Portfolio</div>
+      <h2 data-lang="fr">Sélection de projets</h2>
+      <h2 data-lang="en">Selected projects</h2>
+
+      <div class="grid grid-3" style="gap:var(--md);margin-top:var(--lg);">
+        <!-- Glovo -->
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/sahelpub21-debug/zakariagallouch/main/Glovo_Case%20Study.png" alt="Glovo Case Study" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:var(--md);">
+          <h3 style="font-size:1.3rem;margin-bottom:.5rem;">Glovo</h3>
+          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="fr">Consultant indépendant · Cellule de veille & contenu</p>
+          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="en">Independent consultant · Monitoring & content unit</p>
+          <p data-lang="fr">Structure d'une cellule de veille communication et marché pour relier insights, réputation et action éditoriale. Conception de la série « Humans of Glovo » en réponse aux tensions diplomatiques Maroc-Espagne.</p>
+          <p data-lang="en">Structured a communication and market monitoring unit to connect insights, reputation and editorial action. Designed "Humans of Glovo" series in response to Morocco-Spain diplomatic tensions.</p>
+          <div style="margin-top:var(--md);padding-top:var(--md);border-top:1px solid var(--border);display:flex;gap:var(--md);flex-wrap:wrap;">
+            <div style="font-size:.875rem;color:var(--text-tertiary);" data-lang="fr"><strong style="color:var(--text-primary);">+7M</strong> reach organique</div>
+            <div style="font-size:.875rem;color:var(--text-tertiary);" data-lang="en"><strong style="color:var(--text-primary);">+7M</strong> organic reach</div>
+            <div style="font-size:.875rem;color:var(--text-tertiary);" data-lang="fr"><strong style="color:var(--accent-green);">Positive</strong> sentiment</div>
+            <div style="font-size:.875rem;color:var(--text-tertiary);" data-lang="en"><strong style="color:var(--accent-green);">Positive</strong> sentiment</div>
+          </div>
+        </div>
+
+        <!-- ATDA -->
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/sahelpub21-debug/zakariagallouch/main/ATDA_Case_study.jpg" alt="ATDA Case Study" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:var(--md);">
+          <h3 style="font-size:1.3rem;margin-bottom:.5rem;">ATDA</h3>
+          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="fr">Consultant indépendant, Client: CIO Mag · Assises africaines de la transformation digitale</p>
+          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="en">Independent consultant, Client: CIO Mag · African Digital Transformation Summit</p>
+          <p data-lang="fr">Pilotage de la stratégie de communication et relations presse avec une communauté d'influenceurs africains. Production du documentaire « Rêve d'Afrique » transformé en série de capsules courtes.</p>
+          <p data-lang="en">Led communication and PR strategy with a community of African influencers. Produced "Rêve d'Afrique" documentary transformed into short video series.</p>
+          <div style="margin-top:var(--md);padding-top:var(--md);border-top:1px solid var(--border);">
+            <div style="font-size:.875rem;color:var(--text-tertiary);" data-lang="fr">Contenu co-créé avec <strong style="color:var(--text-primary);">8 décideurs Tech</strong> en Afrique</div>
+            <div style="font-size:.875rem;color:var(--text-tertiary);" data-lang="en">Content co-created with <strong style="color:var(--text-primary);">8 Tech decision-makers</strong> in Africa</div>
+          </div>
+        </div>
+
+        <!-- Fan4All -->
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/sahelpub21-debug/zakariagallouch/main/Fan4all_case_study.jpeg" alt="Fan4All Case Study" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:var(--md);">
+          <h3 style="font-size:1.3rem;margin-bottom:.5rem;">Fan4All</h3>
+          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);">Head of Comms · Marketplace SportTech</p>
+          <p data-lang="fr">Repositionnement de « passion foot » vers lifestyle plus fédérateur. Étude personas, benchmark, optimisation UX et funnels de content marketing. Stratégie RP générant +300K€ de PR Value.</p>
+          <p data-lang="en">Repositioned from "football passion" to broader lifestyle positioning. Persona study, benchmark, UX optimization and content marketing funnels. PR strategy generating +€300K PR Value.</p>
+          <div style="margin-top:var(--md);padding-top:var(--md);border-top:1px solid var(--border);display:flex;gap:var(--md);">
+            <div style="font-size:.875rem;color:var(--text-tertiary);"><strong style="color:var(--text-primary);">300K€</strong> PR Value</div>
+            <div style="font-size:.875rem;color:var(--text-tertiary);"><strong style="color:var(--text-primary);">+28%</strong> Conversion Rate</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--xl);">
+        <a href="https://yti.my.canva.site/zg-portfolio" target="_blank" class="btn btn-secondary">
+          <span data-lang="fr">Recevoir Portfolio</span>
+          <span data-lang="en">Get Portfolio</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
       </div>
     </div>
   </section>
@@ -402,84 +464,25 @@
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section style="background:var(--bg-subtle);">
-    <div class="container">
-      <div class="eyebrow">Portfolio</div>
-      <h2 data-lang="fr">Sélection de projets</h2>
-      <h2 data-lang="en">Selected projects</h2>
-
-      <div class="grid grid-3" style="gap:var(--md);margin-top:var(--lg);">
-        <!-- Glovo -->
-        <div class="card">
-          <div style="display:inline-block;padding:.25rem .75rem;background:var(--accent-purple);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:var(--sm);" data-lang="fr">Reputation management & Content strategy</div>
-          <div style="display:inline-block;padding:.25rem .75rem;background:var(--accent-purple);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:var(--sm);" data-lang="en">Reputation management & Content strategy</div>
-          <h3 style="font-size:1.3rem;margin-bottom:.5rem;">Glovo</h3>
-          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="fr">Consultant indépendant</p>
-          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="en">Independent consultant</p>
-          <h4 data-lang="fr">Glovo — Cellule de veille & contenu</h4>
-          <h4 data-lang="en">Glovo — Monitoring & content unit</h4>
-          <p data-lang="fr">Structure d'une cellule de veille communication et marché pour relier insights, réputation et action éditoriale. Conception de la série « Humans of Glovo » en réponse aux tensions diplomatiques Maroc-Espagne.</p>
-          <p data-lang="en">Structured a communication and market monitoring unit to connect insights, reputation and editorial action. Designed "Humans of Glovo" series in response to Morocco-Spain diplomatic tensions.</p>
-        </div>
-
-        <!-- ATDA -->
-        <div class="card">
-          <div style="display:inline-block;padding:.25rem .75rem;background:var(--accent-green);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:var(--sm);" data-lang="fr">PR strategy & Video production</div>
-          <div style="display:inline-block;padding:.25rem .75rem;background:var(--accent-green);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:var(--sm);" data-lang="en">PR strategy & Video production</div>
-          <h3 style="font-size:1.3rem;margin-bottom:.5rem;">ATDA</h3>
-          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="fr">Consultant indépendant, Client: CIO Mag</p>
-          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);" data-lang="en">Independent consultant, Client: CIO Mag</p>
-          <h4 data-lang="fr">ATDA — Assises africaines de la transformation digitale</h4>
-          <h4 data-lang="en">ATDA — African Digital Transformation Summit</h4>
-          <p data-lang="fr">Pilotage de la stratégie de communication et relations presse avec une communauté d'influenceurs africains. Production du documentaire « Rêve d'Afrique » transformé en série de capsules courtes.</p>
-          <p data-lang="en">Led communication and PR strategy with a community of African influencers. Produced "Rêve d'Afrique" documentary transformed into short video series.</p>
-        </div>
-
-        <!-- Fan4All -->
-        <div class="card">
-          <div style="display:inline-block;padding:.25rem .75rem;background:var(--primary);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:var(--sm);" data-lang="fr">Brand Positioning & Inbound Marketing</div>
-          <div style="display:inline-block;padding:.25rem .75rem;background:var(--primary);color:#fff;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:var(--sm);" data-lang="en">Brand Positioning & Inbound Marketing</div>
-          <h3 style="font-size:1.3rem;margin-bottom:.5rem;">Fan4All</h3>
-          <p style="font-size:.875rem;color:var(--text-tertiary);margin-bottom:var(--md);">Head of Comms</p>
-          <h4 data-lang="fr">Fan4All — Marketplace SportTech</h4>
-          <h4 data-lang="en">Fan4All — SportTech Marketplace</h4>
-          <p data-lang="fr">Repositionnement de « passion foot » vers lifestyle plus fédérateur. Étude personas, benchmark, optimisation UX et funnels de content marketing. Stratégie RP générant +300K€ de PR Value.</p>
-          <p data-lang="en">Repositioned from "football passion" to broader lifestyle positioning. Persona study, benchmark, UX optimization and content marketing funnels. PR strategy generating +€300K PR Value.</p>
-        </div>
-      </div>
-
-      <div style="text-align:center;margin-top:var(--xl);">
-        <a href="https://sahelpub21-debug.github.io/zakariagallouch/" target="_blank" class="btn btn-secondary">
-          <span data-lang="fr">Recevoir Portfolio</span>
-          <span data-lang="en">Get Portfolio</span>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- CTA -->
   <section id="contact">
     <div class="container">
       <div class="cta-section">
-        <h2 data-lang="fr">Discutons de vos objectifs marketing</h2>
-        <h2 data-lang="en">Let's discuss your marketing objectives</h2>
+        <h2 data-lang="fr">Discutons de vos objectifs</h2>
+        <h2 data-lang="en">Let's discuss your objectives</h2>
         <p class="lead" style="color:rgba(255,255,255,.9);" data-lang="fr">
-          Vous avez un enjeu pressant (lancement, conversion, positionnement, réputation) et voulez des livrables en jours, pas en mois. On démarre par un Express 72 h, puis on étend si utile.
+          Vous avez un projet de communication, un lancement produit ou un besoin de repositionnement ? Échangeons sur vos enjeux et objectifs. Je travaille en formats flexibles selon vos contraintes : mission express, package structurant ou accompagnement au long cours.
         </p>
         <p class="lead" style="color:rgba(255,255,255,.9);" data-lang="en">
-          You have a pressing challenge (launch, conversion, positioning, reputation) and want deliverables in days, not months. We start with an Express 72h, then extend if useful.
+          Do you have a communication project, product launch or repositioning need? Let's discuss your challenges and objectives. I work in flexible formats according to your constraints: express mission, structuring package or long-term support.
         </p>
-        <p style="color:rgba(255,255,255,.9);font-size:.9rem;margin-top:var(--sm);" data-lang="fr">Réponse sous 24 h.</p>
-        <p style="color:rgba(255,255,255,.9);font-size:.9rem;margin-top:var(--sm);" data-lang="en">Response within 24 h.</p>
         <div class="cta-group" style="justify-content:center">
           <a href="https://calendly.com/gallouch-zakaria/30-min-consultation" target="_blank" class="btn btn-primary">
             <span data-lang="fr">Planifier un échange</span>
             <span data-lang="en">Schedule a call</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </a>
-          <a href="https://sahelpub21-debug.github.io/zakariagallouch/" target="_blank" class="btn btn-secondary" style="background:#fff;border:1px solid rgba(255,255,255,.3)">
+          <a href="https://yti.my.canva.site/zg-portfolio" target="_blank" class="btn btn-secondary" style="background:#fff;border:1px solid rgba(255,255,255,.3)">
             <span data-lang="fr">Recevoir le portfolio</span>
             <span data-lang="en">Get the portfolio</span>
           </a>
